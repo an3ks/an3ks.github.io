@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +14,15 @@
         rel="stylesheet">
     <title>COSMOS</title>
 </head>
-
 <body>
+    <!-- Хедер, в нем находится чекбокс переключения темы, ссылки на дочерние страницы
+     и контакты, также чекбокс для мобильной версии сайта -->
     <header class="header">
-        <a href="#" class="logo">A</a>
+        <input type="checkbox" id="toggle" class="toggle">
+<label for="toggle" class="button">
+    <img src="temp/sun.png" id="sun" alt="Light theme">
+    <img src="temp/half-moon.png" id="moon" alt="Dark theme">
+</label>
         <input type="checkbox" id="menuwka">
         <label for="menuwka" class="icons">
             <i id="menu" class='bx bxl-squarespace'></i>
@@ -26,7 +30,7 @@
         </label>
         <nav class="navbar">
             <a id="lk" href="home.html">Home</a>
-            <a id="lk" href="#">Calc</a>
+            <a id="lk" href="test/test.html">Test</a>
             <a id="lk" href="#">Gallery</a>
             <p id="contacts">
                 <a target="_blank" href="https://vk.com/nefelibata1"><i class='bx bxl-vk'></i></a>
@@ -35,19 +39,16 @@
             </p>
         </nav>
     </header>
+    <!-- Блок карточек-ссылок -->
     <main>
         <div class="container">
-            <div class="textBlock"><h1>Космос</h1><p class="description">Космос - необъястная пустота, окружающая нас со всех сторон... На этом сайте я отобразил лишь малую часть всего того, что находится за пределами нашей планеты. Чтобы подробнее посмотреть каждый объект, пожалуйста, нажмите на соответсвующую карточку. Приятного просмотра.</p></div>
+            <div class="textBlock"><h1>Космос</h1><p class="description"><span id="fw">Космос</span> – бескрайние просторы загадочной вселенной, где сосуществуют бесчисленные звезды, планеты и галактики. Здесь скрыты тайны, удивительные явления и возможности для бесконечного открытия. <br><br><span id="fw">На</span> этом сайте вы можете подробнее рассмотреть некоторые космические объекты. Просто кликните по соответствующей карточке и отправьтесь в увлекательное путешествие по космосу.</p></div>
             <a href=""><div class="card1"><p class="tc">Туманности</p></div></a>
             <a href=""><div class="card2"><p class="tc">Кометы</p></div></a>
             <a href="blackholes.html"><div class="card3"><p class="tc">Черные дыры</p></div></a>
             <a href=""><div class="card4"><p class="tc">Экзопланеты</p></div></a>
         </div>
     </main>
+      <script src="home.js"></script>
 </body>
-
 </html>
-
-
-
-

@@ -1,0 +1,521 @@
+/* Общие стили + стили для body + переменные для светлой и темной темы */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#menuwka{
+    display: none;
+}
+body{
+    --txtcolor: #fff;
+    --inpcolor: #000;
+    --navclr: #fff;
+    --inpclr:#000;
+    --hcolor: rgb(0, 215, 215);
+    --contacts:rgb(0, 227, 227);
+    --bgnav: rgba(0,0,0,0.7);
+    --bginp: rgba(255,255,255,0.5);
+    --btncolor: rgb(0, 227, 227);
+    --hbr: /*здесь нет цвета*/;
+    --bgtest: rgba(0,0,0,0.7);
+    --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    --img: url(../temp/zemlya-planeta-kosmos-6494.jpg);
+    height: 100vh;
+    background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.dark{
+    /* --txtcolor: #000000; */
+    --navclr: #000;
+    --inpclr:#fff;
+    --contacts:#ea6f42;
+    --hcolor: #fff;
+    --hbr: #ea6f42;
+    --bgnav: rgba(255,255,255,0.4);
+    /* --bgtest:rgba(255,255,255,0.0); */
+    --bginp: rgba(88, 88, 88, 0.65);
+    --btncolor: #ff7f50;
+    /* --inpcolor: #fff; */
+    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0))
+}
+/* Стили для хедер и навбар на компьютерной версии сайта */
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 0.3%;
+    background-color: var(--bgnav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--navclr);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 7vh;
+    font-family: "Jersey 15", sans-serif;
+}
+.navbar{
+    margin-top: 1.4vh;
+    margin-right: 10vh;
+    justify-content: center;
+}
+/* Настройка изображений-кнопок переключения темы*/
+.toggle{
+    display: none;
+}
+#moon, #sun{
+    margin-left: 3vh;
+    width: 40px;
+    height: 40px;
+}
+
+#sun {
+    display: none;
+}
+
+.toggle:checked + .button #sun {
+    display: block;
+}
+
+.toggle:checked + .button #moon {
+    display: none;
+}
+/* Настройка для контактов и главного блока текста*/
+
+.icons{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+/* Стили для контактов */
+#contacts{
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 3vh;
+    font-family: "Jersey 15", sans-serif;
+    display: flex;
+    float: right;
+    letter-spacing: 0;
+}
+#contacts a{
+    letter-spacing: 0;
+    margin-right: 3vh;
+    margin-top: 0.3vh;
+}
+i{
+    color: var(--contacts);
+}
+.textBlock{
+    /* background-color: bisque; */
+    grid-area: textBlock;
+    height: 50vh;
+    margin-top: 23vh;
+}
+/* Стили для текста в текстовом блоке */
+
+h1{
+    margin-top: 10%;
+    font-size: 4.7rem;
+    margin-left: 2.5vh;
+    line-height: 9vh;
+    color: var(--hcolor);
+    -webkit-text-stroke: 2.3px var(--hbr);
+}
+.textBlock p{
+    margin-top: 1vh;
+}
+#fw{
+    margin-left: 3vh;
+}
+.description{
+    margin-left: 3vh;
+    color: white;
+    font-size: 1.43rem;
+    text-align: justify;
+}
+/* Грид для комп верси сайта */
+.container {
+    display: grid;
+    width: 100%;
+    height: 88vh;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "textBlock form";
+    /* background-color: red; */
+    grid-gap: 10px;
+}
+.forma{
+    display: grid;
+    grid-area: form;
+}
+.form-container {
+    background-color: var(--bgtest);
+    border: 1px solid var(--btncolor);
+    /* color: rebeccapurple; */
+    color: var(--inpcolor);
+    padding: 20px;
+    border-radius: 8px;
+    width: 50vh;
+    display: flex;
+    float: right;
+    margin-top: 20vh;
+    margin-left: 15vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--txtcolor);
+    font-size: 19px;
+    height: 570px;
+}
+.result-container{
+    background-color: var(--bgtest);
+    border: 1px solid var(--btncolor);
+    /* color: rebeccapurple; */
+    color: var(--inpcolor);
+    padding: 20px;
+    border-radius: 8px;
+    width: 40vh;
+    height: 450px;
+    display: flex;
+    float: right;
+    margin-top: 20vh;
+    margin-left: 15vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--txtcolor);
+    font-size: 19px;
+}
+.bkb{
+    margin-top: 50px;
+    display: inline-flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15vh;
+    height: 27px;
+    font-size: 1.3rem;
+    justify-content: center;
+    background-color: var(--btncolor);
+    color: #fff;
+    border-radius: 27px;
+    border: none;
+    transition: 0.3s;
+    text-decoration: none;
+    border: 1px solid var(--btncolor);
+    position: relative;
+    overflow: hidden;
+}
+.bkb:hover {
+  box-shadow: 1px 1px 15px 7px var(--btncolor);
+}
+.result-container p{
+    color: var(--btncolor);
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight:500;
+    margin-top: 0.5vh;
+}
+input{
+    background-color: var(--bginp);
+    color: var(--inpclr);
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: var(--bgnav) 1px solid;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#fstopt, #scnopt{
+    display: inline-flex;
+}
+#fstopt{
+    margin-left: 5vh;
+}
+#scnopt{
+    float: right;
+    margin-right: 50px; 
+}
+#noopt{
+    display: inline-flex;
+    float: right;
+    margin-right: 100px; 
+}
+.data{
+    margin-bottom: 2.3vh;
+    display: inline-block;
+    width: 100%;
+}
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 2em;
+}
+#hd{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+label{
+    margin-right: 10px;
+}
+.btncont{
+    width: 100%;
+    text-align: center;
+}
+#upper, #lower{
+    width: 40%;
+    display: inline;
+    margin-left: 25px;}
+
+.btn{
+    margin-top: 50px;
+    display: inline-flex;
+    width: 25vh;
+    height: 27px;
+    font-size: 1.3rem;
+    justify-content: center;
+    background-color: var(--btncolor);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+.btn {
+    text-decoration: none;
+    border: 1px solid var(--btncolor);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    box-shadow: 1px 1px 15px 7px var(--btncolor);
+  }
+/* Адаптивная верстка для мобильной версси сайта */
+@media screen and (max-width: 770px) {
+    body{
+        height: 100vh;
+        background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+    }
+    .result-container{
+        display: grid;
+        grid-area: form;
+    }
+    .container {
+        justify-content: center;
+        display: grid;
+        /* margin-left: 30px;
+        text-align: center; */
+        width: 90%;
+        height: 88vh;
+        grid-template-rows: 630px 800px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "textBlock"
+        "form";
+    }
+    
+    .textBlock{
+        /* background-color: bisque; */
+        grid-area: textBlock;
+        height: 70vh;
+        margin-top: 20vh;
+        padding-right: 3vh;
+    }
+    h1{
+        color: var(--hcolor);
+    }
+    .header{
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
+    }
+    .icons{
+        display: inline-flex;
+        margin-right: 5vh;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 5vh;
+        height: 0;
+        background-color: var(--bgnav);
+        transition: 0.3s ease-in;
+        overflow: hidden;
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        margin: 3.3vh;
+        /* text-decoration: underline;
+        text-underline-offset: 10px; */
+    }
+    #contacts{
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Jersey 15", sans-serif;
+    display: block;
+    letter-spacing: 10px;
+        
+    }
+    #contacts a{
+        font-size: 1.7rem;
+        color: var(--txtcolor);
+        display: inline-block;
+        letter-spacing: 50%;
+        margin: 0;
+    }
+    /* Чекбокс для открытия навбара */
+    #cross{
+        display: none;
+    }
+    #menuwka:checked~.icons #menu{
+        display: none;
+    }
+    #menuwka:checked~.navbar{
+        height: 30vh;
+    }
+    #menuwka:checked~.icons #cross{
+        display: block;
+    }
+    .form-container{
+        width: calc(100% - 30px); 
+        margin: 20vh auto 10px;
+        margin-bottom: 100px;
+    }
+    .result-container{width: calc(100% - 30px); 
+        margin: 20vh auto 10px;
+        margin-bottom: 100px;}
+
+}
+@media screen and (max-width: 435px) {
+    body{
+        height: 100vh;
+        background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+    }
+    .result-container{
+        display: grid;
+        grid-area: form;
+    }
+    .container {
+        display: grid;
+        /* margin-left: 30px;
+        text-align: center; */
+        width: 100%;
+        height: 88vh;
+        grid-template-rows: 630px 800px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "textBlock"
+        "form";
+    }
+    
+    .textBlock{
+        /* background-color: bisque; */
+        width: 390px;
+        grid-area: textBlock;
+        height: 70vh;
+        /* margin-top: 20vh;
+        padding-right: 3vh; */
+        margin-top: 9vh;
+    }
+    h1{
+        color: var(--hcolor);
+        font-size: 3.5rem;
+        line-height: 5.5vh;
+
+    }
+    .header{
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
+    }
+    .icons{
+        display: inline-flex;
+        margin-right: 5vh;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 5vh;
+        height: 0;
+        background-color: var(--bgnav);
+        transition: 0.3s ease-in;
+        overflow: hidden;
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        margin: 3.3vh;
+        /* text-decoration: underline;
+        text-underline-offset: 10px; */
+    }
+    #contacts{
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Jersey 15", sans-serif;
+    display: block;
+    letter-spacing: 10px;
+        
+    }
+    #contacts a{
+        font-size: 1.7rem;
+        color: var(--txtcolor);
+        display: inline-block;
+        letter-spacing: 50%;
+        margin: 0;
+    }
+    /* Чекбокс для открытия навбара */
+    #cross{
+        display: none;
+    }
+    #menuwka:checked~.icons #menu{
+        display: none;
+    }
+    #menuwka:checked~.navbar{
+        height: 30vh;
+    }
+    #menuwka:checked~.icons #cross{
+        display: block;
+    }
+    .form-container{
+        width: calc(100%-30px); 
+        margin-top: 25vh;
+    }
+    .result-container{width: calc(100% - 30px); 
+        height: 500px;    
+        margin-top: 30vh;
+    }
+    .bkb{
+        margin-top: 19.3vh;
+    }
+
+}

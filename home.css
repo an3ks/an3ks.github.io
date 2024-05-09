@@ -1,12 +1,4 @@
-/* значит смена темы будет осущетсвляться так:
-1) убирается затемняющий градиент с фонового изображения
-2) градиент навбара делается белым и более прозрачным
-3) текст навбара и лого делается темно-серого цвета
-4) надписи на карточках принимают белый цвет
-5) может быть меняются изображения на карточках, но это очень врядли
-дефолтная тема - темная, светлая - меняемая.... 
-+
- Не забыть привести код в порядок + поменять изображение для экзопланет*/
+/* Общие стили + стили для body + переменные для светлой и темной темы */
 *{
     margin: 0;
     padding: 0;
@@ -16,129 +8,86 @@
 a{
     text-decoration: none;
 }
+#menuwka{
+    display: none;
+}
 body{
+    --txtcolor: #fff;
+    --hcolor: rgb(0, 215, 215);
+    --contacts:rgb(0, 227, 227);
+    --bgnav: rgba(0,0,0,0.7);
+    --cardtext: rgb(0, 215, 215);
+    --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    --img: url(temp/zemlya-planeta-kosmos-6494.jpg);
+    --hbr: /*здесь нет цвета*/;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(temp/zemlya-planeta-kosmos-6494.jpg);
+    background-image: var(--backgrad), url(temp/zemlya-planeta-kosmos-6494.jpg);
     background-size: cover;
     background-position: center;
 }
+.dark{
+    --contacts:#ea6f42;
+    --cardtext: #ea6f42;
+    --hcolor: #fff;
+    --hbr: #ea6f42;
+    --txtcolor: #151515;
+    --bgnav: rgba(255,255,255,0.4);
+    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0))
+}
+/* Стили для хедер и навбар на компьютерной версии сайта */
 .header{
     position: fixed;
     width: 100%;
     padding: 0.3%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--bgnav);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 3;
 }
-.logo{
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    margin-left: 9VH;
-    cursor: default;
-    font-family:'Times New Roman', Times, serif;
-
-}
 .navbar a{
     font-size: 1.7rem;
-    color: white;
+    color: var(--txtcolor);
     text-decoration: none;
     font-weight: 500;
     margin-right: 7vh;
     font-family: "Jersey 15", sans-serif;
 }
 .navbar{
+    margin-top: 1.4vh;
     margin-right: 10vh;
+    justify-content: center;
 }
-#menuwka{
+/* Настройка изображений-кнопок переключения темы*/
+.toggle{
     display: none;
 }
+#moon, #sun{
+    margin-left: 3vh;
+    width: 40px;
+    height: 40px;
+}
+
+#sun {
+    display: none;
+}
+
+.toggle:checked + .button #sun {
+    display: block;
+}
+
+.toggle:checked + .button #moon {
+    display: none;
+}
+/* Настройка для контактов и главного блока текста*/
+
 .icons{
-    color: white;
+    color: var(--txtcolor);
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
-.textBlock{
-    /* background-color: bisque; */
-    grid-area: textBlock;
-    height: 50vh;
-    margin-top: 30vh;
-}
-.card1{
-    background-image: url(temp/south\ ring.jpg);
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(196, 223, 255); grid-area: card1;
-    margin-top: 15vh;
-    margin-left: 10vh;
-    width: 230px;
-    height: 270px;
-    transition: 0.3s;
-}
-.card2{
-    background-image: url(temp/comet.png);
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(255, 196, 243); grid-area: card2;
-    width: 230px;
-    height: 270px;
-    margin-top: 15vh;
-    margin-left: 3vh;
-    transition: 0.3s;}
-.card3{
-    background-image: url(temp/black\ hole.jpg);
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(196, 255, 216); grid-area: card3;
-    width: 230px;
-    height: 270px;
-    margin-left: 10vh;
-    margin-top: 5vh;
-    transition: 0.3s;}
-.card4{
-    background-image: url(temp/launch.jpg);
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(255, 196, 197); grid-area: card4;
-    width: 230px;
-    height: 270px;
-    margin-left: 3vh;
-    transition: 0.3s;
-    margin-top: 5vh;}
-.tc{
-    text-decoration: none;
-    color: transparent;
-    transition: 0.5s;
-    font-size: 1.3rem;
-    text-align: center;
-    padding-top: 10px;
-}
-
-.card1:hover, .card2:hover,.card3:hover,.card4:hover{
-    transform: translateY(-10%);
-    .tc{
-        color: wheat;
-    }
-}
-.container {
-    display: grid;
-    width: 100%;
-    height: 88vh;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-    grid-template-areas: 
-    "textBlock card1 card2"
-    "textBlock card3 card4";
-    /* background-color: red; */
-    grid-gap: 10px;
-}
+/* Стили для контактов */
 #contacts{
     font-size: 1.3rem;
     color: white;
@@ -155,23 +104,95 @@ body{
     margin-right: 3vh;
     margin-top: 0.3vh;
 }
+.textBlock{
+    /* background-color: bisque; */
+    grid-area: textBlock;
+    height: 50vh;
+    margin-top: 30vh;
+}
+/* Стили для текста в текстовом блоке */
 
 h1{
     margin-top: 10%;
-    color: white;
+    color: var(--hcolor);
+    -webkit-text-stroke: 2.3px var(--hbr);
     font-size: 6rem;
-    margin-left: 3vh;
+    margin-left: 2.5vh;
 }
 .description{
     margin-left: 3vh;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.43rem;
     text-align: justify;
 }
+#fw{
+    margin-left: 3vh;
+}
+i{color: var(--contacts);}
+/* Карты (изображения, форматирование, фон и тп) */
+.card1, .card2, .card3, .card4{
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    width: 290px;
+    height: 350px;
+    transition: 0.3s;
+}
+.card1{
+    background-image: url(temp/south\ ring.jpg);
+    background-color: rgb(196, 223, 255); grid-area: card1;
+    margin-top: 15vh;
+    margin-left: 10vh;
+}
+.card2{
+    background-image: url(temp/comet.png);    
+    background-color: rgb(255, 196, 243); grid-area: card2;
+    margin-top: 15vh;
+    margin-left: 3vh;}
+.card3{
+    background-image: url(temp/black\ hole.jpg);  
+    background-color: rgb(196, 255, 216); grid-area: card3;
+    margin-left: 10vh;
+    margin-top: 5vh;}
+.card4{
+    background-image: url(temp/nSyz4odoyBA.jpg);   
+    background-color: rgb(255, 196, 197); grid-area: card4;
+    margin-left: 3vh;
+    margin-top: 5vh;}
+/* Текст внутри карт*/
+.tc{
+    text-decoration: none;
+    color: transparent;
+    transition: 0.5s;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 10px;
+}
+/* Карты ховер */
+.card1:hover, .card2:hover,.card3:hover,.card4:hover{
+    transform: translateY(-10%);
+    .tc{
+        color: var(--cardtext);
+    }
+}
+/* Грид для комп верси сайта */
+.container {
+    display: grid;
+    width: 100%;
+    height: 88vh;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: 
+    "textBlock card1 card2"
+    "textBlock card3 card4";
+    /* background-color: red; */
+    grid-gap: 10px;
+}
+/* Адаптивная верстка для мобильной версси сайта */
 @media screen and (max-width: 770px) {
     body{
         height: 100vh;
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(temp/zemlya-planeta-kosmos-6494.jpg);
+        background-image: var(--backgrad), url(temp/zemlya-planeta-kosmos-6494.jpg);
         background-attachment:fixed;
         background-size: cover;
         background-position: center;
@@ -205,7 +226,7 @@ h1{
         background-size: cover;
         background-position: center;
         width: 360px;
-        height: 450px;
+        height: 500px;
         position: static;
         margin: 0 auto;
         transition: 0.3s;
@@ -224,22 +245,26 @@ h1{
         margin-top: 5vh;
         }
     .card4{
-        background-image: url(temp/launch.jpg);
+        background-image: url(temp/nSyz4odoyBA.jpg);
         grid-area: card4;
         margin-top: 5vh;
+        margin-bottom: 3vh;
     }
     .tc{
+        text-decoration: none;
         font-size: 1.7rem;
+        color: var(--hcolor);
+        opacity: 0;
+        transition: 2s;
+        display: block;
     }
-    .card1:hover, .card2:hover,.card3:hover,.card4:hover{
-        transform: translateY(-10%);
-        .tc{
-            color: wheat;
-        }
+    .show{
+        opacity: 1;
     }
     .header{
-        padding: 0.3%;
-        background-color: rgba(0, 0, 0, 0.7);
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
     }
     .icons{
         display: inline-flex;
@@ -248,9 +273,9 @@ h1{
     .navbar{
         position: absolute;
         width: 100%;
-        top: 100%;
+        top: 5vh;
         height: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: var(--bgnav);
         transition: 0.3s ease-in;
         overflow: hidden;
         left: 0;
@@ -267,7 +292,7 @@ h1{
     width: 100%;
     margin-right: 0;
     font-size: 1.3rem;
-    color: white;
+    color: #fff;
     font-weight: 500;
     font-family: "Jersey 15", sans-serif;
     display: block;
@@ -276,11 +301,144 @@ h1{
     }
     #contacts a{
         font-size: 1.7rem;
-        color: white;
+        color: var(--txtcolor);
         display: inline-block;
         letter-spacing: 50%;
         margin: 0;
     }
+    /* Чекбокс для открытия навбара */
+    #cross{
+        display: none;
+    }
+    #menuwka:checked~.icons #menu{
+        display: none;
+    }
+    #menuwka:checked~.navbar{
+        height: 30vh;
+    }
+    #menuwka:checked~.icons #cross{
+        display: block;
+    }
+}
+@media screen and (max-width: 435px) {
+    body{
+        height: 100vh;
+        background-image: var(--backgrad), url(temp/zemlya-planeta-kosmos-6494.jpg);
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+    }
+    .container {
+        display: grid;
+        width: 100%;
+        height: 88vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "textBlock"
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+        /* background-color: red; */
+        grid-gap: 10px;
+    }
+    .textBlock{
+        /* background-color: bisque; */
+        grid-area: textBlock;
+        height: 70vh;
+        margin-top: 23vh;
+        padding-right: 3vh;
+    }
+    .card1, .card2, .card3, .card4{
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+        width: 323px;
+        height: 423px;
+        position: static;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+    .card1{
+        margin-top: 5.5vh;
+        background-image: url(temp/south\ ring.jpg);
+        grid-area: card1;
+    }
+    .card2{
+        background-image: url(temp/comet.png);
+        grid-area: card2;
+        margin-top: 5vh;}
+    .card3{
+        background-image: url(temp/black\ hole.jpg);
+        grid-area: card3;
+        margin-top: 5vh;
+        }
+    .card4{
+        background-image: url(temp/nSyz4odoyBA.jpg);
+        grid-area: card4;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+    }
+    .tc{
+        text-decoration: none;
+        font-size: 1.7rem;
+        color: var(--hcolor);
+        opacity: 0;
+        transition: 2s;
+        display: block;
+    }
+    .show{
+        opacity: 1;
+    }
+    .header{
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
+    }
+    .icons{
+        display: inline-flex;
+        margin-right: 5vh;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 5vh;
+        height: 0;
+        background-color: var(--bgnav);
+        transition: 0.3s ease-in;
+        overflow: hidden;
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        margin: 3.3vh;
+        /* text-decoration: underline;
+        text-underline-offset: 10px; */
+    }
+    #contacts{
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Jersey 15", sans-serif;
+    display: block;
+    letter-spacing: 10px;
+        
+    }
+    #contacts a{
+        font-size: 1.7rem;
+        color: var(--txtcolor);
+        display: inline-block;
+        letter-spacing: 50%;
+        margin: 0;
+    }
+    /* Чекбокс для открытия навбара */
     #cross{
         display: none;
     }
