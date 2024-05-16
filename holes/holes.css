@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#menuwka{
+    display: none;
+}
+
+body{
+    --txtcolor: #fff;
+    --inpcolor: #000;
+    --navclr: #fff;
+
+    --hcolor: rgb(0, 215, 215);
+    --mobilebg: rgba(0, 95, 90, 0.527);
+
+    --hcolor2:rgb(167, 167, 167);
+    --mobilebg2: rgba(39, 39, 39, 0.692);
+
+    --hcolor3:rgb(141, 158, 255);
+    --mobilebg3: rgba(39, 44, 71, 0.774);
+    
+    --contacts:rgb(0, 227, 227);
+    --bgnav: rgba(0,0,0,0.7);
+    --bginp: rgba(255,255,255,0.5);
+    --btncolor: rgb(0, 227, 227);
+   
+    --hbr: transparent;
+    --bgtest: rgba(0,0,0,0.7);
+    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4));
+    /* --img: url(../temp/zemlya-planeta-kosmos-6494.jpg); */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+}
+.dark{
+    /* --txtcolor: #000000; */
+    --navclr: #000;
+    --contacts:#ea6f42;
+    --hcolor: #fff;
+    --mobilebg: #a751328f;
+
+    --hcolor2:whitesmoke;
+    --mobilebg2: rgba(184, 182, 178, 0.692);
+
+    --hcolor3:rgb(255, 255, 255);
+    --mobilebg3: rgba(207, 167, 113, 0.644);
+
+    --hbr: #ea6f42;
+    --bgnav: rgba(255,255,255,0.4);
+    /* --bgtest:rgba(255,255,255,0.0); */
+    --bginp: rgba(88, 88, 88, 0.65);
+    
+    --btncolor: #ff7f50;
+    /* --inpcolor: #fff; */
+    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0))
+}
+/* Стили для хедер и навбар на компьютерной версии сайта */
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 0.3%;
+    background-color: var(--bgnav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--navclr);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 7vh;
+    font-family: "Jersey 15", sans-serif;
+}
+.navbar{
+    margin-top: 1.4vh;
+    margin-right: 10vh;
+    justify-content: center;
+}
+/* Настройка изображений-кнопок переключения темы*/
+.toggle{
+    display: none;
+}
+#moon, #sun{
+    margin-left: 3vh;
+    width: 40px;
+    height: 40px;
+}
+
+#sun {
+    display: none;
+}
+
+.toggle:checked + .button #sun {
+    display: block;
+}
+
+.toggle:checked + .button #moon {
+    display: none;
+}
+/* Настройка для контактов и главного блока текста*/
+
+.icons{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+/* Стили для контактов */
+#contacts{
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 3vh;
+    font-family: "Jersey 15", sans-serif;
+    display: flex;
+    float: right;
+    letter-spacing: 0;
+}
+#contacts a{
+    letter-spacing: 0;
+    margin-right: 3vh;
+    margin-top: 0.3vh;
+}
+i{
+    color: var(--contacts);
+}
+.slider{
+    position: relative;
+    background-color: black;
+
+}
+.slide{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    background-position:center;
+    overflow-x: hidden;
+    display: none;
+}
+.active{
+    display: block;
+}
+.description{
+    /* background-color: rgba(0, 0, 0, 0.03); */
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    padding: 40px 0px;
+    color: #fff;
+}
+.left, .right{
+    font-weight: bold;
+    font-size: 5rem;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    top: 50vh;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 7vh;
+    user-select: none;
+}
+#fw{
+    margin-left: 3vh;
+}
+.left p{
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+    top: 0;
+    transform: translateY(-20%);
+}
+.right p{
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10px;
+    top: 0;
+    transform: translateY(-20%);
+}
+.left:hover, .right:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.left{
+    left: 3px;
+}
+.right{
+    right: 3px;
+}
+.slide1{
+    background-image:var(--backgrad), url(../temp/hole1.jpg);
+    background-size: cover;
+}
+#smallscreen{
+    display: none;
+}
+
+.slide1 .description{
+    width: 30%;
+    height: 50vh;
+    top: 0;
+    margin-left:20vh;
+    margin-top: 30vh;
+    transform: translateY(-1%);
+    text-align: center;
+    text-align: justify;
+}
+.slide1 h1{
+    color: rgb(216, 115, 102);
+    /* -webkit-text-stroke: 2.3px var(--hbr); */
+    font-size: 5rem;
+}
+
+.slide1 p{
+    font-size: 1.3rem;
+    margin-top: 30vh;
+}
+.slide2{
+    background-image: var(--backgrad), url(../temp/exo2.jpg);
+
+}
+.slide2 .description{
+    /* background-color: rgb(121, 121, 0); */
+    width: 30%;
+    height: 50vh;
+    top: 0;
+    margin-left:20vh;
+    margin-top: 40vh;
+    transform: translateY(-1%);
+    text-align: center;
+    text-align: justify;
+}
+.slide2 h1{
+    color: rgb(163, 152, 152);
+    /* -webkit-text-stroke: 2.3px var(--hbr); */
+    font-size: 5rem;
+    margin-bottom: 3vh;
+}
+.slide2 p{
+    font-size: 1.3rem;
+}
+.slide3{
+    background-image:var(--backgrad), url(../temp/exo3.jpg);
+}
+.slide3 .description{
+    /* background-color: rgb(121, 121, 0); */
+    width: 30%;
+    height: 50vh;
+    top: 0;
+    margin-left:17vh;
+    margin-top: 35vh;
+    transform: translateY(-1%);
+    text-align: center;
+    text-align: justify;
+}
+.slide3 h1{
+    color: rgb(231, 151, 75);
+    /* -webkit-text-stroke: 2.3px var(--hbr); */
+    font-size: 5rem;
+    margin-bottom: 3vh;
+}
+.slide3 p{
+    font-size: 1.3rem;
+}
+#rotated{
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 435px) {
+    .header{
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
+    }
+    .icons{
+        display: inline-flex;
+        margin-right: 5vh;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 5vh;
+        height: 0;
+        background-color: var(--bgnav);
+        transition: 0.3s ease-in;
+        overflow: hidden;
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        margin: 3.3vh;
+        /* text-decoration: underline;
+        text-underline-offset: 10px; */
+    }
+    #contacts{
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Jersey 15", sans-serif;
+    display: block;
+    letter-spacing: 10px;
+        
+    }
+    #contacts a{
+        font-size: 1.7rem;
+        color: var(--txtcolor);
+        display: inline-block;
+        letter-spacing: 50%;
+        margin: 0;
+    }
+    .slide1 .description{
+        /* background-color: palegreen; */
+        width: 100%;
+        margin: 0;
+        margin-top: 10vh;
+    }
+    .slide1 h1{
+        color: var(--hcolor);
+        -webkit-text-stroke: 2.3px var(--hbr);
+        margin-left: 1vh;
+        margin-top: 0;
+        margin-bottom: 3vh;
+        line-height: 70px;
+        /* background: rgb(64, 40, 121); */
+    }
+    .slide1 #rotated{
+        font-size: 2rem;
+        -webkit-text-stroke: 0px var(--hbr);
+        width: 90px;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        margin-left: 2.0vh;
+    }
+    #smallscreen{
+        display: block;
+    }
+    #bigscreen{
+        display: none;
+    }
+    .slide1 p{
+        margin-top: 10vh ;
+        background-color: var(--mobilebg);
+        border-radius: 30px;
+        padding: 10px;
+    }
+    .slide2 .description{
+        /* background-color: palegreen; */
+        width: 100%;
+        margin: 0;
+        margin-top: 10vh;
+    }
+    .slide2 h1{
+        color: var(--hcolor2);
+        -webkit-text-stroke: 2.3px var(--hbr);
+        margin-left: 1vh;
+        margin-top: 0;
+        margin-bottom: 3vh;
+        line-height: 70px;
+        /* background: rgb(64, 40, 121); */
+    }
+    .slide2 #rotated{
+        font-size: 2rem;
+        color: rgb(190, 179, 173);
+        -webkit-text-stroke: 0px white;
+        width: 90px;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        margin-left: 2.0vh;
+    }
+    .slide2 p{
+        margin-top: 10vh ;
+        color: var(--navclr);
+        background-color: var(--mobilebg2);
+        border-radius: 30px;
+        padding: 10px;
+    }
+    .slide3 .description{
+        /* background-color: palegreen; */
+        width: 100%;
+        margin: 0;
+        margin-top: 7vh;
+    }
+    .slide3 h1{
+        color: var(--hcolor3);
+        -webkit-text-stroke: 2.3px var(--hbr);
+        left: 0;
+        margin-top: 0;
+        margin-bottom: 3vh;
+        line-height: 70px;
+        /* background: rgb(64, 40, 121); */
+        text-align: center;
+    }
+    .slide3 #rotated{
+        font-size: 2rem;
+        -webkit-text-stroke: 0px var(--hbr);
+        width: 90px;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        margin-left: 18.0vh;
+    }
+    .slide3 p{
+        margin-top: 10vh ;
+        background-color: var(--mobilebg3);
+        border-radius: 30px;
+        padding: 10px;
+        color: var(--navclr);
+    }
+    .left, .right{
+        font-weight: bold;
+        color: var(--contacts);
+        display: flex;
+        position: absolute;
+        z-index: 1000;
+        top: 50vh;
+        cursor: pointer;
+        border-radius: 50px;
+        height: 7vh;
+        user-select: none;
+        font-size: 3rem;
+        margin-top: 35vh;
+    }
+    .left:hover, .right:hover{
+        background: none;
+    }
+    .left{
+        left: 60%;
+    }
+    .right{
+        right: 0px;
+    }
+    /* Чекбокс для открытия навбара */
+    #cross{
+        display: none;
+    }
+    #menuwka:checked~.icons #menu{
+        display: none;
+    }
+    #menuwka:checked~.navbar{
+        height: 30vh;
+    }
+    #menuwka:checked~.icons #cross{
+        display: block;
+    }
+}

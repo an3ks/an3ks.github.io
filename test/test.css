@@ -21,7 +21,7 @@ body{
     --bgnav: rgba(0,0,0,0.7);
     --bginp: rgba(255,255,255,0.5);
     --btncolor: rgb(0, 227, 227);
-    --hbr: /*здесь нет цвета*/;
+    --hbr: transparent;
     --bgtest: rgba(0,0,0,0.7);
     --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
     --img: url(../temp/zemlya-planeta-kosmos-6494.jpg);
@@ -120,6 +120,8 @@ i{
     grid-area: textBlock;
     height: 50vh;
     margin-top: 23vh;
+    width: 80%;
+    margin-left: 10vh;
 }
 /* Стили для текста в текстовом блоке */
 
@@ -129,7 +131,7 @@ h1{
     margin-left: 2.5vh;
     line-height: 9vh;
     color: var(--hcolor);
-    -webkit-text-stroke: 2.3px var(--hbr);
+    -webkit-text-stroke: 1.3px var(--hbr);
 }
 .textBlock p{
     margin-top: 1vh;
@@ -319,7 +321,7 @@ label{
         display: grid;
         /* margin-left: 30px;
         text-align: center; */
-        width: 90%;
+        width: auto;
         height: 88vh;
         grid-template-rows: 630px 800px;
         grid-template-columns: 1fr;
@@ -332,8 +334,10 @@ label{
         /* background-color: bisque; */
         grid-area: textBlock;
         height: 70vh;
-        margin-top: 20vh;
+        margin-top: 15vh;
         padding-right: 3vh;
+        margin-left: 7vh;
+
     }
     h1{
         color: var(--hcolor);
@@ -397,12 +401,13 @@ label{
         display: block;
     }
     .form-container{
-        width: calc(100% - 30px); 
-        margin: 20vh auto 10px;
+        width: 70%; 
+        margin: 29vh auto 10px;
         margin-bottom: 100px;
     }
-    .result-container{width: calc(100% - 30px); 
-        margin: 20vh auto 10px;
+    .result-container{
+        width: 70%; 
+        margin: 27vh auto 10px;
         margin-bottom: 100px;}
 
 }
@@ -435,12 +440,11 @@ label{
     
     .textBlock{
         /* background-color: bisque; */
-        width: 390px;
+        width: auto;
         grid-area: textBlock;
         height: 70vh;
-        /* margin-top: 20vh;
-        padding-right: 3vh; */
-        margin-top: 9vh;
+        margin-left: 0;
+        margin-top: 16vh;
     }
     h1{
         color: var(--hcolor);
@@ -507,8 +511,8 @@ label{
         display: block;
     }
     .form-container{
-        width: calc(100%-30px); 
-        margin-top: 25vh;
+        width: 90%; 
+        margin-top: 29vh;
     }
     .result-container{width: calc(100% - 30px); 
         height: 500px;    

@@ -1,13 +1,3 @@
-const toggle = document.getElementById("toggle");
-const theme = window.localStorage.getItem("theme");
-if (theme === "dark") document.body.classList.add("dark");
-
-toggle.addEventListener("click", () => {
-   document.body.classList.toggle("dark");
-   if (theme === "dark") {
-     window.localStorage.setItem("theme", "light");
-   } else window.localStorage.setItem("theme", "dark");
-});
 
 document.addEventListener("DOMContentLoaded", function() {
   var dataForm = document.getElementById("data-form");
@@ -17,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var resultContainer = document.querySelector(".result-container");
   resultContainer.style.display = "none";
 
-  dataForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-
+  dataForm.addEventListener("submit", function() {
       var height = parseInt(document.getElementById("height").value);
       var weight = parseInt(document.getElementById("weight").value);
       var leg = parseFloat(document.getElementById("leg").value);
@@ -51,19 +39,24 @@ document.addEventListener("DOMContentLoaded", function() {
           resultText = "К сожалению ваши физические показатели, указанные в анкете, не соответствуют начальным требованиям для претендования на звание космонавта. Не расстраивайтесь, в вашем будущем еще много возможностей для достижения великих высот!";
       }
 
+      //создание блока с ответом
       var resultContainer = document.createElement("div");
       resultContainer.className = "result-container";
       resultContainer.innerHTML = "<p>" + resultText + "</p>";
 
+      // Создание кнопки возврата к форме
       var bkb = document.createElement("button");
       bkb.textContent = "К форме";
       bkb.className = "bkb";
+
+      
       document.getElementById("height").value=" ";
       document.getElementById("weight").value=" ";
       document.getElementById("leg").value=" ";
       document.getElementById("pulse").value=" ";
       document.getElementById("upper").value=" ";
       document.getElementById("lower").value=" ";
+      //функция удаления блока результата
       bkb.addEventListener("click", function() {
           resultParentContainer.removeChild(resultContainer);
           resultParentContainer.appendChild(dataForm.parentNode);
@@ -78,17 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-const observer =  new IntersectionObserver((entries)=>{
-  entries.forEach((entry)=>{
-    if (entry.isIntersecting){
-      entry.target.classList.add('show')
-    }
-    else{
-      entry.target.classList.remove('show')
-    }
-  });
-});
+// const observer =  new IntersectionObserver((entries)=>{
+//   entries.forEach((entry)=>{
+//     if (entry.isIntersecting){
+//       entry.target.classList.add('show')
+//     }
+//     else{
+//       entry.target.classList.remove('show')
+//     }
+//   });
+// });
 
 
-const hiddentext = document.querySelectorAll('.form-container');
-hiddentext.forEach((form) => observer.observe(form));
+// const hiddentext = document.querySelectorAll('.form-container');
+// hiddentext.forEach((form) => observer.observe(form));
