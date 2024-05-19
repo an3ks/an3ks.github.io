@@ -25,19 +25,20 @@ body{
     --bgtest: rgba(0,0,0,0.7);
     --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
     --img: url(../temp/zemlya-planeta-kosmos-6494.jpg);
-    
+    --boxshad: 0px 80px 900px 1px rgba(255, 250, 250, 0.466);
     height: 100vh;
     background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
     background-size: cover;
     background-position: center;
 }
 .dark{
-    /* --txtcolor: #000000; */
+    --txtcolor: #000000;
     --navclr: #000;
     --inpclr:#fff;
     --contacts:#ea6f42;
     --hcolor: #fff;
     --hbr: #ea6f42;
+    --boxshad: 0px 80px 900px 1px rgba(0, 0, 0, 0.466);
     --bgnav: rgba(255,255,255,0.4);
     /* --bgtest:rgba(255,255,255,0.0); */
     --bginp: rgba(88, 88, 88, 0.65);
@@ -140,6 +141,9 @@ i{color: var(--contacts);}
     margin-top: 0vh;
     transform: translateX(18.3%); 
 }
+.form-container label{
+    color: white;
+}
 .description h1{
     margin-top: 5%;
     color: var(--hcolor);
@@ -154,7 +158,6 @@ i{color: var(--contacts);}
     text-align: justify;
     margin-top: 3vh;
 }
-
 #fw{
     margin-left: 5vh;
 }
@@ -163,6 +166,18 @@ input{
     color: var(--inpclr);
     width: 100%;
     padding: 8px;
+    font-size: 15px;
+    border: var(--bgnav) 1px solid;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#answ{
+    background-color: var(--bginp);
+    color: var(--inpclr);
+    width: 100%;
+    padding: 8px;
+    height: 40px;
     font-size: 15px;
     border: var(--bgnav) 1px solid;
     border-radius: 3px;
@@ -199,15 +214,12 @@ label{
     border-radius: 10px;
     border: none;
     transition: 0.3s;
-}
-.btn {
     text-decoration: none;
     border: 1px solid var(--btncolor);
     position: relative;
     overflow: hidden;
-  }
-  
-  .btn:hover {
+} 
+.btn:hover {
     box-shadow: 1px 1px 15px 7px var(--btncolor);
   }
 
@@ -230,17 +242,15 @@ label{
     /* background-color: rebeccapurple; */
     width: 100%;
 }
+
 .picsDescription p{
     margin-left: 3vh;
-    color: white;
-    font-size: 1.43rem;
-    text-align: justify;
     /* width: 23%; */
     /* background-color: red; */
-    margin-left: 3vh;
     color: white;
     font-size: 1.43rem;
     text-align: justify;
+    margin-top: 3vh;
 }
 .pics h1{
     /* display: inline-flex; */
@@ -255,28 +265,30 @@ label{
 .pic{
     display: grid;
     grid-area: pic;
-    background-color: #ff7f50;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 57.6vh;
     height: 43vh;
     margin-top: 0vh;
     margin-left: 10%;
-}
-.pics button{
-    margin-left: 3vh;
-    display: inline-flex;
-    width: 23%;
-    height: 27px;
-    font-size: 1.3rem;
+    align-items: center;
     justify-content: center;
-    background-color: var(--btncolor);
-    color: #fff;
-    border-radius: 10px;
-    border: none;
-    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border: 1px solid black;
+    box-shadow: var(--boxshad);
 }
-.pics button:hover {
-    box-shadow: 1px 1px 15px 7px var(--btncolor);
-  }
+.pic img{
+    height: 43vh;
+    width: 57.6vh;
+}
+#answ{
+    width: 100%;
+    height: 45px;
+}
 .container{
     padding-top: 12vh;
     display: grid;
@@ -287,4 +299,203 @@ label{
     grid-template-areas: 
     "calcs pics";
     grid-gap: 170px;
+}
+@media screen and (max-width: 435px) {
+    body{
+        height: 100vh;
+        background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+    }
+    .container {
+        display: grid;
+        width: 100%;
+        height: 88vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "calcs"    
+        "pics";
+        grid-gap: 10px;
+    }
+    .forma{
+        display: grid;
+        grid-area: calcs;
+        width: 100%;
+        margin-left: 0;
+    }
+    .forma h1{
+        font-size:3.3rem;
+        margin-left: 0;
+        padding-left: 30px;
+        margin-top: 1vh;
+    }
+    .forma p{
+        margin-top: 3vh;
+        font-size:1.3rem;
+        margin-left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .form-container {
+        background-color: var(--bgtest);
+        border: 1px solid var(--btncolor);
+        color: var(--inpcolor);
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        display: block;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        color: var(--txtcolor);
+        font-size: 19px;
+        height: 350px;
+        margin-top: 5vh;
+        transform: translateX(6%); 
+    }
+    .btn{
+        margin-top: 10px;
+    } 
+
+.pics{
+    display: grid;
+    width: 100%;
+    height: 83vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "txt"
+    "pic";
+    grid-gap: 0px;
+}
+.picsDescription{
+    display: grid;
+    grid-area: txt;
+    width: 100%;
+}
+
+.picsDescription p{
+    color: white;
+    text-align: justify;
+    font-size:1.3rem;
+    margin-left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.pics h1{
+    /* display: inline-flex; */
+    margin-top: 4%;
+    color: var(--hcolor);
+    -webkit-text-stroke: 2.3px var(--hbr);
+    font-size:3.3rem;
+    width: 100%;
+    margin-left: 3vh;
+    margin-left: 0;
+    padding-left: 30px;
+
+}
+.pic{
+    display: grid;
+    grid-area: pic;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 350px;
+    height: 400px;
+    margin-top: 5vh;
+    margin-left: 0px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border: 1px solid black;
+    box-shadow: var(--boxshad);
+    transform: translateX(6%);
+}
+.pic img{
+    width: 350px;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .header{
+        /* padding: 0.3%; */
+        background-color: var(--bgnav);
+        height: 6.4vh;
+    }
+    .icons{
+        display: inline-flex;
+        margin-right: 5vh;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 5vh;
+        height: 0;
+        background-color: var(--bgnav);
+        transition: 0.3s ease-in;
+        overflow: hidden;
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        margin: 3.3vh;
+        /* text-decoration: underline;
+        text-underline-offset: 10px; */
+    }
+    #contacts{
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Jersey 15", sans-serif;
+    display: block;
+    letter-spacing: 10px;
+        
+    }
+    #contacts a{
+        font-size: 1.7rem;
+        color: var(--txtcolor);
+        display: inline-block;
+        letter-spacing: 50%;
+        margin: 0;
+    }
+    /* Чекбокс для открытия навбара */
+    #cross{
+        display: none;
+    }
+    #menuwka:checked~.icons #menu{
+        display: none;
+    }
+    #menuwka:checked~.navbar{
+        height: 30vh;
+    }
+    #menuwka:checked~.icons #cross{
+        display: block;
+    }
 }

@@ -51,24 +51,23 @@
                 <form id="data-form">
                     <div class="data">
                         <label id="hd" for="height">Ваше число</label>
-                        <input type="number" id="height" name="height" required>
+                        <input type="number" id="userNumber" name="userNumber" required>
                     </div>
                     <div class="data">
                         <label id="hd" for="weight">Единица измерения</label>
                         <select name="type" id="typeselect">
-                            <option value="1">Парсек</option>
-                            <option value="2">Световые года</option>
-                            <option value="3">Астрономические единицы</option>
+                            <option value="par">Парсек</option>
+                            <option value="liye">Световые года</option>
+                            <option value="aem">Астрономические единицы</option>
                         </select>
                     </div>
                     <div class="data">
                         <label id="hd" for="leg">Расстояние в километрах</label>
-                        <input type="number" id="leg" name="leg" required>
+                        <p id="answ"></p>
                     </div>
                     <div class="btncont">
-                    <button type="submit" class="btn">Отправить</button>
+                    <button type="button" id="btn" class="btn">Отправить</button>
                 </div>
-                <div class="result-container" id="result-container"></div>
                 </form>
             </div>
             </div>
@@ -83,6 +82,7 @@
         </div>
     </div>
       <script src="gallery.js"></script>
+      <script src="distance.js"></script>
       <script src="../theme.js"></script>
 </body>
 </html>
