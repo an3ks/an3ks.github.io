@@ -16,14 +16,14 @@ body{
     --inpcolor: #000;
     --navclr: #fff;
 
-    --hcolor: rgb(0, 215, 215);
-    --mobilebg: rgba(0, 95, 90, 0.527);
+    --hcolor: rgb(83, 3, 3);
+    --mobilebg: rgba(63, 0, 5, 0.527);
 
-    --hcolor2:rgb(167, 167, 167);
-    --mobilebg2: rgba(39, 39, 39, 0.692);
+    --hcolor2:rgb(255, 124, 183);
+    --mobilebg2: rgba(82, 52, 133, 0.692);
 
-    --hcolor3:rgb(141, 158, 255);
-    --mobilebg3: rgba(39, 44, 71, 0.774);
+    --hcolor3:rgb(255, 217, 141);
+    --mobilebg3: rgba(83, 44, 2, 0.774);
     
     --contacts:rgb(0, 227, 227);
     --bgnav: rgba(0,0,0,0.7);
@@ -47,7 +47,7 @@ body{
     --mobilebg: #a751328f;
 
     --hcolor2:whitesmoke;
-    --mobilebg2: rgba(184, 182, 178, 0.692);
+    --mobilebg2: rgba(185, 177, 255, 0.517);
 
     --hcolor3:rgb(255, 255, 255);
     --mobilebg3: rgba(207, 167, 113, 0.644);
@@ -170,8 +170,9 @@ i{
     border-radius: 50px;
     height: 7vh;
     user-select: none;
+    transition: 0.7s;
 }
-#fw{
+.fw{
     margin-left: 3vh;
 }
 .left p{
@@ -191,7 +192,7 @@ i{
     transform: translateY(-20%);
 }
 .left:hover, .right:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 7rem;
 
 }
 .left{
@@ -201,7 +202,7 @@ i{
     right: 3px;
 }
 .slide1{
-    background-image:var(--backgrad), url(../temp/exo1.jpg);
+    background-image:var(--backgrad), url(../temp/fog1.jpg);
     background-size: cover;
 }
 #smallscreen{
@@ -209,42 +210,54 @@ i{
 }
 
 .slide1 .description{
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
-    margin-left:20vh;
-    margin-top: 15vh;
+    margin-left:17vh;
+    margin-top: 30vh;
     transform: translateY(-1%);
     text-align: center;
-    text-align: justify;
+    
 }
 .slide1 h1{
-    color: rgb(255, 139, 139);
+    color: #eea609;
+    margin-left: 23vh;
+    margin-top: 17vh;
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
+    width: 30%;
+    
 }
 
 .slide1 p{
     font-size: 1.3rem;
     margin-top: 2.7vh;
+    text-align: justify;
+}
+#tt1{
+    margin-top: 4vh;
+}
+#bt1{
+    margin-top: 5vh;
 }
 .slide2{
-    background-image: var(--backgrad), url(../temp/exo2.jpg);
+    background-image: var(--backgrad), url(../temp/fog2.jpg);
 
 }
 .slide2 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
-    margin-left:20vh;
-    margin-top: 40vh;
+    margin-left:13vh;
+    margin-top:23vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
+    color: rgb(246, 246, 246);
 }
 .slide2 h1{
-    color: rgb(163, 152, 152);
+    color: rgb(255, 124, 183);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     margin-bottom: 3vh;
@@ -252,16 +265,22 @@ i{
 .slide2 p{
     font-size: 1.3rem;
 }
+#tt2{
+    margin-top: 7vh;
+}
+#bt2{
+    margin-top: 5vh;
+}
 .slide3{
-    background-image:var(--backgrad), url(../temp/exo3.jpg);
+    background-image:var(--backgrad), url(../temp/fog3.jpg);
 }
 .slide3 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
     margin-left:17vh;
-    margin-top: 35vh;
+    margin-top: 17vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
@@ -271,77 +290,22 @@ i{
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     margin-bottom: 3vh;
+    text-align: center;
 }
 .slide3 p{
     font-size: 1.3rem;
+}
+#tt3{
+    margin-top: 7vh;
+}
+#bt3{
+    margin-top: 7vh;
 }
 #rotated{
     font-size: 2rem;
     text-align: center;
 }
-@media screen and (max-width: 770px) {
-    body{
-        height: 100vh;
-    }
-    .header{
-        /* padding: 0.3%; */
-        background-color: var(--bgnav);
-        height: 6.4vh;
-    }
-    .icons{
-        display: inline-flex;
-        margin-right: 5vh;
-    }
-    .navbar{
-        position: absolute;
-        width: 100%;
-        top: 5vh;
-        height: 0;
-        background-color: var(--bgnav);
-        transition: 0.3s ease-in;
-        overflow: hidden;
-        left: 0;
-    }
-    .navbar a{
-        display: block;
-        text-align: center;
-        margin: 3.3vh;
-        /* text-decoration: underline;
-        text-underline-offset: 10px; */
-    }
-    #contacts{
-    text-align: center;
-    width: 100%;
-    margin-right: 0;
-    font-size: 1.3rem;
-    color: #fff;
-    font-weight: 500;
-    font-family: "Jersey 15", sans-serif;
-    display: block;
-    letter-spacing: 10px;
-        
-    }
-    #contacts a{
-        font-size: 1.7rem;
-        color: var(--txtcolor);
-        display: inline-block;
-        letter-spacing: 50%;
-        margin: 0;
-    }
-    /* Чекбокс для открытия навбара */
-    #cross{
-        display: none;
-    }
-    #menuwka:checked~.icons #menu{
-        display: none;
-    }
-    #menuwka:checked~.navbar{
-        height: 30vh;
-    }
-    #menuwka:checked~.icons #cross{
-        display: block;
-    }
-}
+
 @media screen and (max-width: 435px) {
     .header{
         /* padding: 0.3%; */
@@ -361,6 +325,9 @@ i{
         transition: 0.3s ease-in;
         overflow: hidden;
         left: 0;
+    }
+    .closed{
+        display: none;
     }
     .navbar a{
         display: block;
@@ -392,43 +359,39 @@ i{
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 27vh;
     }
     .slide1 h1{
         color: var(--hcolor);
         -webkit-text-stroke: 2.3px var(--hbr);
-        margin-left: 1vh;
-        margin-top: 0;
-        margin-bottom: 3vh;
+        margin-left: 0;
+        margin-top: 9vh;
+        margin-bottom: 0vh;
+        text-align: center;
         line-height: 70px;
+        font-size: 5rem;
+        width: 100%;
         /* background: rgb(64, 40, 121); */
     }
-    .slide1 #rotated{
-        font-size: 2rem;
-        -webkit-text-stroke: 0px var(--hbr);
-        width: 90px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 2.0vh;
-    }
-    #smallscreen{
-        display: block;
-    }
-    #bigscreen{
-        display: none;
-    }
     .slide1 p{
-        margin-top: 10vh ;
+        margin-top: 5vh;
         background-color: var(--mobilebg);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt1{
+        margin-top: 1vh;
+    }
+    #bt1{
+        margin-top: 10vh;
     }
     .slide2 .description{
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 7vh;
     }
     .slide2 h1{
         color: var(--hcolor2);
@@ -437,17 +400,8 @@ i{
         margin-top: 0;
         margin-bottom: 3vh;
         line-height: 70px;
-        /* background: rgb(64, 40, 121); */
-    }
-    .slide2 #rotated{
-        font-size: 2rem;
-        color: rgb(190, 179, 173);
-        -webkit-text-stroke: 0px white;
-        width: 90px;
-        height: 50px;
         text-align: center;
-        justify-content: center;
-        margin-left: 2.0vh;
+        /* background: rgb(64, 40, 121); */
     }
     .slide2 p{
         margin-top: 10vh ;
@@ -455,6 +409,14 @@ i{
         background-color: var(--mobilebg2);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt2{
+        margin-top: 7vh;
+    }
+    #bt2{
+        margin-top: 17vh;
     }
     .slide3 .description{
         /* background-color: palegreen; */
@@ -466,20 +428,11 @@ i{
         color: var(--hcolor3);
         -webkit-text-stroke: 2.3px var(--hbr);
         left: 0;
-        margin-top: 0;
+        margin-top: 5vh;
         margin-bottom: 3vh;
         line-height: 70px;
         /* background: rgb(64, 40, 121); */
         text-align: center;
-    }
-    .slide3 #rotated{
-        font-size: 2rem;
-        -webkit-text-stroke: 0px var(--hbr);
-        width: 90px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 18.0vh;
     }
     .slide3 p{
         margin-top: 10vh ;
@@ -487,6 +440,14 @@ i{
         border-radius: 30px;
         padding: 10px;
         color: var(--navclr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt3{
+        margin-top: 5vh;
+    }
+    #bt3{
+        margin-top: 13vh;
     }
     .left, .right{
         font-weight: bold;
@@ -504,6 +465,7 @@ i{
     }
     .left:hover, .right:hover{
         background: none;
+        font-size: 3em;
     }
     .left{
         left: 60%;

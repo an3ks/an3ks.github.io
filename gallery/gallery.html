@@ -29,9 +29,9 @@
             <i id="cross" class='bx bx-x-circle'></i>
         </label>
         <nav class="navbar">
-            <a id="lk" href="../home.html">Home</a>
-            <a id="lk" href="../test/test.html">Test</a>
-            <a id="lk" href="../gallery/gallery.html">Gallery</a>
+            <a href="../home.html">Home</a>
+            <a href="../test/test.html">Test</a>
+            <a href="../gallery/gallery.html">Gallery</a>
             <p id="contacts">
                 <a target="_blank" href="https://vk.com/nefelibata1"><i class='bx bxl-vk'></i></a>
                 <a target="_blank" href="https://t.me/nefelibata_7"><i class='bx bxl-telegram'></i></a>
@@ -45,16 +45,17 @@
         <div class="forma">
             <div class="description">
                 <h1>Космическое расстояние</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus est suscipit id praesentium assumenda quasi error, beatae quos molestiae alias autem minus laudantium a, possimus aliquid repellendus totam eaque cum?</p>
+                <p><span class="fw">Зачастую</span> космические единицы измерения затрудняют понимание, насколько же действительно велико расстояние в космосе. Используя представленную форму вы сможете перевести любое число в километры и ощутить насколько безграничен космос.
+                </p>
             </div>
             <div class="form-container">
                 <form id="data-form">
                     <div class="data">
-                        <label id="hd" for="height">Ваше число</label>
+                        <label class="hd" for="userNumber">Ваше число</label>
                         <input type="number" id="userNumber" name="userNumber" required>
                     </div>
                     <div class="data">
-                        <label id="hd" for="weight">Единица измерения</label>
+                        <label class="hd" for="typeselect">Единица измерения</label>
                         <select name="type" id="typeselect">
                             <option value="par">Парсек</option>
                             <option value="liye">Световые года</option>
@@ -62,7 +63,7 @@
                         </select>
                     </div>
                     <div class="data">
-                        <label id="hd" for="leg">Расстояние в километрах</label>
+                        <label class="hd">Расстояние в километрах</label>
                         <p id="answ"></p>
                     </div>
                     <div class="btncont">
@@ -74,10 +75,12 @@
         <div class="pics">
             <div class="picsDescription">
                 <h1>Космическая галерея</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quam expedita cupiditate corrupti repellendus nostrum rerum temporibus tempore libero. Ullam incidunt accusantium dignissimos!  </p>
+                <p> <span class="fw">В</span> космической галерее вы можете сгенерировать случайное изображение из базы данных NASA. Для этого достаточно нажать по области фотографии.
+                </p>
             </div>
             <!-- <button>Lorem</button> -->
             <div class="pic"></div>
+            <div id="space"></div>
            
         </div>
     </div>

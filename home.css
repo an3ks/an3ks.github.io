@@ -11,6 +11,7 @@ a{
 #menuwka{
     display: none;
 }
+/* цвета стандартной темы + стили для всего документа */
 body{
     --txtcolor: #fff;
     --hcolor: rgb(0, 215, 215);
@@ -25,6 +26,7 @@ body{
     background-size: cover;
     background-position: center;
 }
+/* цвета для альтернативной темы */
 .dark{
     --contacts:#ea6f42;
     --cardtext: #ea6f42;
@@ -109,7 +111,7 @@ body{
     grid-area: textBlock;
     height: 50vh;
     margin-top: 30vh;
-    width: 80%;
+    width: 65%;
     margin-left: 10vh;
 }
 /* Стили для текста в текстовом блоке */
@@ -127,7 +129,7 @@ h1{
     font-size: 1.43rem;
     text-align: justify;
 }
-#fw{
+.fw{
     margin-left: 3vh;
 }
 i{color: var(--contacts);}
@@ -143,24 +145,24 @@ i{color: var(--contacts);}
 .card1{
     background-image: url(temp/south\ ring.jpg);
     background-color: rgb(196, 223, 255); grid-area: card1;
-    margin-top: 15vh;
+    margin-top: 13vh;
     margin-left: 10vh;
 }
 .card2{
-    background-image: url(temp/comet.png);    
+    background-image: url(temp/galaxy.jpg);    
     background-color: rgb(255, 196, 243); grid-area: card2;
-    margin-top: 15vh;
+    margin-top: 13vh;
     margin-left: 3vh;}
 .card3{
     background-image: url(temp/black\ hole.jpg);  
     background-color: rgb(196, 255, 216); grid-area: card3;
     margin-left: 10vh;
-    margin-top: 5vh;}
+    margin-top: 3vh;}
 .card4{
     background-image: url(temp/nSyz4odoyBA.jpg);   
     background-color: rgb(255, 196, 197); grid-area: card4;
     margin-left: 3vh;
-    margin-top: 5vh;}
+    margin-top: 3vh;}
 /* Текст внутри карт*/
 .tc{
     text-decoration: none;
@@ -190,7 +192,7 @@ i{color: var(--contacts);}
     /* background-color: red; */
     grid-gap: 10px;
 }
-/* Адаптивная верстка для мобильной версси сайта */
+/* Адаптивная верстка для уменьшенной версии сайта (?)*/
 @media screen and (max-width: 770px) {
     body{
         height: 100vh;
@@ -325,6 +327,7 @@ i{color: var(--contacts);}
         display: block;
     }
 }
+/* Адаптивная верстка для мобильного экрана */
 @media screen and (max-width: 435px) {
     body{
         height: 100vh;
@@ -335,6 +338,7 @@ i{color: var(--contacts);}
         background-repeat: no-repeat;
         background-color: #fff;
     }
+    /* грид */
     .container {
         display: grid;
         width: 100%;
@@ -350,7 +354,9 @@ i{color: var(--contacts);}
         /* background-color: red; */
         grid-gap: 10px;
     }
+    /* текст */
     .textBlock{
+        padding-top: 7vh;
         /* background-color: bisque; */
         grid-area: textBlock;
         width: 100%;
@@ -360,6 +366,7 @@ i{color: var(--contacts);}
         margin-left: 0;
         text-align: center;
     }
+    /* все параметры для карт */
     .card1, .card2, .card3, .card4{
         border-radius: 15px;
         background-size: cover;
@@ -369,6 +376,7 @@ i{color: var(--contacts);}
         position: static;
         margin: 0 auto;
         transition: 0.3s;
+        color: var(--cardtext);
     }
     .card1{
         margin-top: 13vh;
@@ -376,7 +384,7 @@ i{color: var(--contacts);}
         grid-area: card1;
     }
     .card2{
-        background-image: url(temp/comet.png);
+        background-image: url(temp/galaxy.jpg);
         grid-area: card2;
         margin-top: 5vh;}
     .card3{
@@ -390,16 +398,20 @@ i{color: var(--contacts);}
         margin-top: 5vh;
         margin-bottom: 3vh;
     }
+    /* текст на картах */
     .tc{
         text-decoration: none;
         font-size: 1.7rem;
-        color: var(--hcolor);
+        color: var(--cardtext);
         opacity: 0;
         transition: 2s;
         display: block;
     }
     .show{
         opacity: 1;
+    }
+    #closed{
+        display: none;
     }
     .header{
         /* padding: 0.3%; */

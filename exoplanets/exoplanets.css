@@ -170,8 +170,9 @@ i{
     border-radius: 50px;
     height: 7vh;
     user-select: none;
+    transition: 0.7s;
 }
-#fw{
+.fw{
     margin-left: 3vh;
 }
 .left p{
@@ -191,7 +192,7 @@ i{
     transform: translateY(-20%);
 }
 .left:hover, .right:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 7rem;
 
 }
 .left{
@@ -204,12 +205,12 @@ i{
     background-image:var(--backgrad), url(../temp/exo1.jpg);
     background-size: cover;
 }
-#smallscreen{
+.smallscreen{
     display: none;
 }
 
 .slide1 .description{
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
     margin-left:20vh;
@@ -228,17 +229,23 @@ i{
     font-size: 1.3rem;
     margin-top: 2.7vh;
 }
+#tt1{
+    margin-top: 5vh;
+}
+#bt1{
+    margin-top: 5vh;
+}
 .slide2{
     background-image: var(--backgrad), url(../temp/exo2.jpg);
 
 }
 .slide2 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
     margin-left:20vh;
-    margin-top: 40vh;
+    margin-top: 33vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
@@ -252,16 +259,19 @@ i{
 .slide2 p{
     font-size: 1.3rem;
 }
+#tt2,#bt2{
+    margin-top: 5vh;
+}
 .slide3{
     background-image:var(--backgrad), url(../temp/exo3.jpg);
 }
 .slide3 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 23%;
     height: 50vh;
     top: 0;
     margin-left:17vh;
-    margin-top: 35vh;
+    margin-top: 23vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
@@ -275,7 +285,10 @@ i{
 .slide3 p{
     font-size: 1.3rem;
 }
-#rotated{
+#tt3,#bt3{
+    margin-top: 5vh;
+}
+.rotated{
     font-size: 2rem;
     text-align: center;
 }
@@ -412,10 +425,13 @@ i{
         justify-content: center;
         margin-left: 2.0vh;
     }
-    #smallscreen{
+    .closed{
+        display: none;
+    }
+    .smallscreen{
         display: block;
     }
-    #bigscreen{
+    .bigscreen{
         display: none;
     }
     .slide1 p{
@@ -423,12 +439,17 @@ i{
         background-color: var(--mobilebg);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt1{
+        margin-top: 15vh;
     }
     .slide2 .description{
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
     .slide2 h1{
         color: var(--hcolor2);
@@ -455,6 +476,11 @@ i{
         background-color: var(--mobilebg2);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt2, #bt2{
+        margin-top: 9vh;
     }
     .slide3 .description{
         /* background-color: palegreen; */
@@ -487,6 +513,11 @@ i{
         border-radius: 30px;
         padding: 10px;
         color: var(--navclr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt3, #bt3{
+        margin-top: 9vh;
     }
     .left, .right{
         font-weight: bold;
@@ -504,6 +535,7 @@ i{
     }
     .left:hover, .right:hover{
         background: none;
+        font-size:3rem;
     }
     .left{
         left: 60%;

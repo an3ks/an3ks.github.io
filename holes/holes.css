@@ -16,13 +16,13 @@ body{
     --inpcolor: #000;
     --navclr: #fff;
 
-    --hcolor: rgb(0, 215, 215);
-    --mobilebg: rgba(0, 95, 90, 0.527);
+    --hcolor: rgb(169, 132, 127);
+    --mobilebg: rgba(0, 0, 0, 0.527);
 
-    --hcolor2:rgb(167, 167, 167);
-    --mobilebg2: rgba(39, 39, 39, 0.692);
+    --hcolor2:rgb(54, 114, 203);
+    --mobilebg2: rgba(0, 0, 0, 0.433);
 
-    --hcolor3:rgb(141, 158, 255);
+    --hcolor3:rgb(150, 166, 255);
     --mobilebg3: rgba(39, 44, 71, 0.774);
     
     --contacts:rgb(0, 227, 227);
@@ -44,13 +44,13 @@ body{
     --navclr: #000;
     --contacts:#ea6f42;
     --hcolor: #fff;
-    --mobilebg: #a751328f;
+    --mobilebg: #3d2d27a1;
 
     --hcolor2:whitesmoke;
-    --mobilebg2: rgba(184, 182, 178, 0.692);
+    --mobilebg2: rgba(170, 181, 225, 0.56);
 
     --hcolor3:rgb(255, 255, 255);
-    --mobilebg3: rgba(207, 167, 113, 0.644);
+    --mobilebg3: rgba(133, 218, 248, 0.644);
 
     --hbr: #ea6f42;
     --bgnav: rgba(255,255,255,0.4);
@@ -170,8 +170,9 @@ i{
     border-radius: 50px;
     height: 7vh;
     user-select: none;
+    transition: 0.7s;
 }
-#fw{
+.fw{
     margin-left: 3vh;
 }
 .left p{
@@ -191,7 +192,7 @@ i{
     transform: translateY(-20%);
 }
 .left:hover, .right:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 7rem;
 
 }
 .left{
@@ -209,71 +210,83 @@ i{
 }
 
 .slide1 .description{
-    width: 30%;
+    width: 21%;
     height: 50vh;
     top: 0;
-    margin-left:20vh;
-    margin-top: 30vh;
-    transform: translateY(-1%);
     text-align: center;
     text-align: justify;
+    margin-left: 17vh;
 }
 .slide1 h1{
-    color: rgb(216, 115, 102);
+    color: rgb(169, 132, 127);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
 }
-
+#tt{
+    margin-top: 5vh;
+}
+#bt{
+    margin-top: 5vh;
+}
 .slide1 p{
     font-size: 1.3rem;
-    margin-top: 30vh;
 }
 .slide2{
-    background-image: var(--backgrad), url(../temp/exo2.jpg);
+    background-image: var(--backgrad), url(../temp/hole2.jpg);
 
 }
 .slide2 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 20%;
     height: 50vh;
     top: 0;
-    margin-left:20vh;
-    margin-top: 40vh;
+    margin-left:21vh;
+    margin-top: 27vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
 }
 .slide2 h1{
-    color: rgb(163, 152, 152);
+    color: rgb(185, 54, 31);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
-    margin-bottom: 3vh;
+    transform: translateX(18%);
 }
 .slide2 p{
     font-size: 1.3rem;
 }
+#tt2{
+    margin-top: 5vh;
+}
+#bt2{
+    margin-top: 5vh;
+}
 .slide3{
-    background-image:var(--backgrad), url(../temp/exo3.jpg);
+    background-image:var(--backgrad), url(../temp/hole3.jpg);
 }
 .slide3 .description{
     /* background-color: rgb(121, 121, 0); */
-    width: 30%;
+    width: 20%;
     height: 50vh;
     top: 0;
     margin-left:17vh;
-    margin-top: 35vh;
+    margin-top: 23vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
 }
 .slide3 h1{
-    color: rgb(231, 151, 75);
+    color: rgb(92, 159, 195);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     margin-bottom: 3vh;
+    text-align: right;
 }
 .slide3 p{
     font-size: 1.3rem;
+}
+#bt3{
+    margin-top: 7vh;
 }
 #rotated{
     font-size: 2rem;
@@ -327,28 +340,25 @@ i{
         margin: 0;
     }
     .slide1 .description{
-        /* background-color: palegreen; */
+        /* background-color: rgba(152, 251, 152, 0.548); */
         width: 100%;
         margin: 0;
-        margin-top: 10vh;
+        transform: none;
     }
     .slide1 h1{
         color: var(--hcolor);
+        font-size: 3.9rem;
         -webkit-text-stroke: 2.3px var(--hbr);
         margin-left: 1vh;
-        margin-top: 0;
-        margin-bottom: 3vh;
-        line-height: 70px;
+        margin-top: 7vh;
+        text-align: center;
         /* background: rgb(64, 40, 121); */
     }
-    .slide1 #rotated{
-        font-size: 2rem;
-        -webkit-text-stroke: 0px var(--hbr);
-        width: 90px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 2.0vh;
+    #tt{
+        margin-top: 10vh;
+    }
+    #bt{
+        margin-top: 13vh;
     }
     #smallscreen{
         display: block;
@@ -361,6 +371,8 @@ i{
         background-color: var(--mobilebg);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .slide2 .description{
         /* background-color: palegreen; */
@@ -371,28 +383,26 @@ i{
     .slide2 h1{
         color: var(--hcolor2);
         -webkit-text-stroke: 2.3px var(--hbr);
-        margin-left: 1vh;
-        margin-top: 0;
-        margin-bottom: 3vh;
-        line-height: 70px;
-        /* background: rgb(64, 40, 121); */
-    }
-    .slide2 #rotated{
-        font-size: 2rem;
-        color: rgb(190, 179, 173);
-        -webkit-text-stroke: 0px white;
-        width: 90px;
-        height: 50px;
+        margin-top: 0vh;
+        margin-left: 0vh;
         text-align: center;
-        justify-content: center;
-        margin-left: 2.0vh;
+        margin-right: 10vh;
+        font-size:5rem;
     }
     .slide2 p{
-        margin-top: 10vh ;
+        margin-top: 0vh ;
         color: var(--navclr);
         background-color: var(--mobilebg2);
         border-radius: 30px;
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tt2{
+        margin-top: 10vh;
+    }
+    #bt2{
+        margin-top: 5vh;
     }
     .slide3 .description{
         /* background-color: palegreen; */
@@ -409,23 +419,25 @@ i{
         line-height: 70px;
         /* background: rgb(64, 40, 121); */
         text-align: center;
-    }
-    .slide3 #rotated{
-        font-size: 2rem;
-        -webkit-text-stroke: 0px var(--hbr);
-        width: 90px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 18.0vh;
+        font-size: 3.8rem;
     }
     .slide3 p{
-        margin-top: 10vh ;
+        margin-top: 10vh;
         background-color: var(--mobilebg3);
         border-radius: 30px;
         padding: 10px;
         color: var(--navclr);
+        font-size: 1.27rem;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+    #tt3{
+        margin-top: 9vh;
+    }
+    #bt3{
+        margin-top: 10vh;
+    }
+    .closed{display: none;}
     .left, .right{
         font-weight: bold;
         color: var(--contacts);
@@ -442,6 +454,7 @@ i{
     }
     .left:hover, .right:hover{
         background: none;
+        font-size: 3rem;
     }
     .left{
         left: 60%;

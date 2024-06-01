@@ -25,7 +25,7 @@ body{
     --bgtest: rgba(0,0,0,0.7);
     --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
     --img: url(../temp/zemlya-planeta-kosmos-6494.jpg);
-    --boxshad: 0px 80px 900px 1px rgba(255, 250, 250, 0.466);
+    --boxshad: 0px 80px 900px 1px rgba(97, 97, 97, 0.466);
     height: 100vh;
     background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
     background-size: cover;
@@ -158,7 +158,7 @@ i{color: var(--contacts);}
     text-align: justify;
     margin-top: 3vh;
 }
-#fw{
+.fw{
     margin-left: 5vh;
 }
 input{
@@ -188,7 +188,7 @@ input{
     display: inline-block;
     width: 100%;
 }
-#hd{
+.hd{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -203,7 +203,7 @@ label{
 }
 
 .btn{
-    margin-top: 23px;
+    margin-top: 13px;
     display: inline-flex;
     width: 25vh;
     height: 27px;
@@ -268,8 +268,8 @@ label{
     background-color: rgba(0, 0, 0, 0.5);
     width: 57.6vh;
     height: 43vh;
-    margin-top: 0vh;
-    margin-left: 10%;
+    margin-top: 5vh;
+    margin-left: 7%;
     align-items: center;
     justify-content: center;
     background-size: cover;
@@ -290,7 +290,7 @@ label{
     height: 45px;
 }
 .container{
-    padding-top: 12vh;
+    padding-top: 10vh;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -421,25 +421,6 @@ label{
     width: 350px;
     height: 400px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .header{
         /* padding: 0.3%; */
         background-color: var(--bgnav);
@@ -484,6 +465,9 @@ label{
         display: inline-block;
         letter-spacing: 50%;
         margin: 0;
+    }
+    #space{
+        height: 100px;
     }
     /* Чекбокс для открытия навбара */
     #cross{
