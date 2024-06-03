@@ -302,6 +302,9 @@ label{
   .btn:hover {
     box-shadow: 1px 1px 15px 7px var(--btncolor);
   }
+  .closed{
+    display: none;
+  }
 /* Адаптивная верстка для мобильной версси сайта */
 @media screen and (max-width: 770px) {
     body{
@@ -450,9 +453,13 @@ label{
         margin-left: 0;
         margin-top: 16vh;
     }
+    .textBlock p{
+        text-align: justify;
+        width: 90%;
+    }
     h1{
         color: var(--hcolor);
-        font-size: 3.5rem;
+        font-size: 3.3rem;
         line-height: 5.5vh;
 
     }

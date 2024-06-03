@@ -20,7 +20,7 @@ body{
     --mobilebg: rgba(63, 0, 5, 0.527);
 
     --hcolor2:rgb(255, 124, 183);
-    --mobilebg2: rgba(82, 52, 133, 0.692);
+    --mobilebg2: rgba(82, 52, 133, 0.562);
 
     --hcolor3:rgb(255, 217, 141);
     --mobilebg3: rgba(83, 44, 2, 0.774);
@@ -47,7 +47,7 @@ body{
     --mobilebg: #a751328f;
 
     --hcolor2:whitesmoke;
-    --mobilebg2: rgba(185, 177, 255, 0.517);
+    --mobilebg2: rgba(185, 177, 255, 0.5);
 
     --hcolor3:rgb(255, 255, 255);
     --mobilebg3: rgba(207, 167, 113, 0.644);
@@ -369,7 +369,7 @@ i{
         margin-bottom: 0vh;
         text-align: center;
         line-height: 70px;
-        font-size: 5rem;
+        font-size: 3.9rem;
         width: 100%;
         /* background: rgb(64, 40, 121); */
     }
@@ -382,10 +382,10 @@ i{
         margin-right: 10px;
     }
     #tt1{
-        margin-top: 1vh;
+        margin-top: 0vh;
     }
     #bt1{
-        margin-top: 10vh;
+        margin-top: 9vh;
     }
     .slide2 .description{
         /* background-color: palegreen; */

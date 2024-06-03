@@ -16,13 +16,13 @@ body{
     --inpcolor: #000;
     --navclr: #fff;
 
-    --hcolor: rgb(58, 120, 190);
-    --mobilebg: rgba(13, 70, 155, 0.527);
+    --hcolor: rgb(255, 91, 192);
+    --mobilebg: rgba(103, 43, 131, 0.527);
 
     --hcolor2:rgb(167, 167, 167);
     --mobilebg2: rgba(39, 39, 39, 0.692);
 
-    --hcolor3:rgb(141, 158, 255);
+    --hcolor3:rgb(85, 110, 252);
     --mobilebg3: rgba(39, 44, 71, 0.774);
     
     --contacts:rgb(0, 227, 227);
@@ -372,10 +372,10 @@ i{
         margin-left: 50%;
     }
     #tt1{
-        margin-top: 13vh;
+        margin-top: 0vh;
     }
     #bt1{
-        margin-top: 10vh;
+        margin-top: 16vh;
     }
     #smallscreen{
         display: block;
@@ -405,7 +405,9 @@ i{
         margin-left: 1vh;
         margin-top: 0;
         margin-bottom: 3vh;
-        line-height: 70px;
+        line-height: 39px;
+        font-size: 3.9rem;
+        text-align: center;
         /* background: rgb(64, 40, 121); */
     }
     .slide2 .rotated{
@@ -415,9 +417,10 @@ i{
         width: 90px;
         height: 50px;
         margin-left: 30vh;
+        margin-top: 0;
     }
     .slide2 p{
-        margin-top: 10vh ;
+        margin-top: 10vh;
         color: var(--navclr);
         background-color: var(--mobilebg2);
         border-radius: 30px;
@@ -444,7 +447,7 @@ i{
         left: 0;
         margin-top: 0;
         margin-bottom: 3vh;
-        line-height: 70px;
+        line-height: 63px;
         /* background: rgb(64, 40, 121); */
         text-align: center;
         font-size: 3.9rem;
@@ -467,7 +470,7 @@ i{
         height: 150px;
     }
     #tt3{
-        margin-top: 27vh;
+        margin-top: 23vh;
     }
     .left, .right{
         font-weight: bold;
