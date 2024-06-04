@@ -1,29 +1,32 @@
 /* Общие стили + стили для body + переменные для светлой и темной темы */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Fira Sans", sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-#menuwka{
+
+#menuwka {
     display: none;
 }
-body{
+
+body {
     --txtcolor: #fff;
     --inpcolor: #000;
     --navclr: #fff;
-    --inpclr:#000;
+    --inpclr: #000;
     --hcolor: rgb(0, 215, 215);
-    --contacts:rgb(0, 227, 227);
-    --bgnav: rgba(0,0,0,0.7);
-    --bginp: rgba(255,255,255,0.5);
+    --contacts: rgb(0, 227, 227);
+    --bgnav: rgba(0, 0, 0, 0.7);
+    --bginp: rgba(255, 255, 255, 0.5);
     --btncolor: rgb(0, 227, 227);
     --hbr: transparent;
-    --bgtest: rgba(0,0,0,0.7);
-    --backgrad: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    --bgtest: rgba(0, 0, 0, 0.7);
+    --backgrad: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     --img: url(../temp/zemlya-planeta-kosmos-6494.jpg);
     --boxshad: 0px 80px 900px 1px rgba(97, 97, 97, 0.466);
     height: 100vh;
@@ -31,23 +34,25 @@ body{
     background-size: cover;
     background-position: center;
 }
-.dark{
+
+.dark {
     --txtcolor: #000000;
     --navclr: #000;
-    --inpclr:#fff;
-    --contacts:#ea6f42;
+    --inpclr: #fff;
+    --contacts: #ea6f42;
     --hcolor: #fff;
     --hbr: #ea6f42;
     --boxshad: 0px 80px 900px 1px rgba(0, 0, 0, 0.466);
-    --bgnav: rgba(255,255,255,0.4);
+    --bgnav: rgba(255, 255, 255, 0.4);
     /* --bgtest:rgba(255,255,255,0.0); */
     --bginp: rgba(88, 88, 88, 0.65);
     --btncolor: #ff7f50;
     /* --inpcolor: #fff; */
-    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0))
+    --backgrad: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0))
 }
+
 /* Стили для хедер и навбар на компьютерной версии сайта */
-.header{
+.header {
     position: fixed;
     width: 100%;
     padding: 0.3%;
@@ -57,7 +62,8 @@ body{
     align-items: center;
     z-index: 3;
 }
-.navbar a{
+
+.navbar a {
     font-size: 1.7rem;
     color: var(--txtcolor);
     text-decoration: none;
@@ -65,16 +71,20 @@ body{
     margin-right: 7vh;
     font-family: "Jersey 15", sans-serif;
 }
-.navbar{
+
+.navbar {
     margin-top: 1.4vh;
     margin-right: 10vh;
     justify-content: center;
 }
+
 /* Настройка изображений-кнопок переключения темы*/
-.toggle{
+.toggle {
     display: none;
 }
-#moon, #sun{
+
+#moon,
+#sun {
     margin-left: 3vh;
     width: 40px;
     height: 40px;
@@ -84,23 +94,25 @@ body{
     display: none;
 }
 
-.toggle:checked + .button #sun {
+.toggle:checked+.button #sun {
     display: block;
 }
 
-.toggle:checked + .button #moon {
+.toggle:checked+.button #moon {
     display: none;
 }
+
 /* Настройка для контактов и главного блока текста*/
 
-.icons{
+.icons {
     color: var(--txtcolor);
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
+
 /* Стили для контактов */
-#contacts{
+#contacts {
     font-size: 1.3rem;
     color: white;
     text-decoration: none;
@@ -111,13 +123,18 @@ body{
     float: right;
     letter-spacing: 0;
 }
-#contacts a{
+
+#contacts a {
     letter-spacing: 0;
     margin-right: 3vh;
     margin-top: 0.3vh;
 }
-i{color: var(--contacts);}
-.forma{
+
+i {
+    color: var(--contacts);
+}
+
+.forma {
     display: grid;
     grid-area: calcs;
     /* background-color: rgb(90, 90, 150); */
@@ -125,6 +142,7 @@ i{color: var(--contacts);}
     margin-left: 17%;
 
 }
+
 .form-container {
     background-color: var(--bgtest);
     border: 1px solid var(--btncolor);
@@ -139,29 +157,34 @@ i{color: var(--contacts);}
     font-size: 19px;
     height: 350px;
     margin-top: 0vh;
-    transform: translateX(18.3%); 
+    transform: translateX(18.3%);
 }
-.form-container label{
+
+.form-container label {
     color: white;
 }
-.description h1{
+
+.description h1 {
     margin-top: 5%;
     color: var(--hcolor);
     -webkit-text-stroke: 2.3px var(--hbr);
     font-size: 5rem;
     margin-left: 3vh;
 }
-.description p{
+
+.description p {
     margin-left: 3vh;
     color: white;
     font-size: 1.43rem;
     text-align: justify;
     margin-top: 3vh;
 }
-.fw{
+
+.fw {
     margin-left: 5vh;
 }
-input{
+
+input {
     background-color: var(--bginp);
     color: var(--inpclr);
     width: 100%;
@@ -172,7 +195,7 @@ input{
     box-sizing: border-box;
 }
 
-#answ{
+#answ {
     background-color: var(--bginp);
     color: var(--inpclr);
     width: 100%;
@@ -183,26 +206,30 @@ input{
     border-radius: 3px;
     box-sizing: border-box;
 }
-.data{
+
+.data {
     margin-bottom: 2.3vh;
     display: inline-block;
     width: 100%;
 }
-.hd{
+
+.hd {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
 }
-label{
+
+label {
     margin-right: 10px;
 }
-.btncont{
+
+.btncont {
     width: 100%;
     text-align: center;
 }
 
-.btn{
+.btn {
     margin-top: 13px;
     display: inline-flex;
     width: 25vh;
@@ -218,12 +245,13 @@ label{
     border: 1px solid var(--btncolor);
     position: relative;
     overflow: hidden;
-} 
+}
+
 .btn:hover {
     box-shadow: 1px 1px 15px 7px var(--btncolor);
-  }
+}
 
-.pics{
+.pics {
     display: grid;
     grid-area: pics;
     /* background-color: rgb(90, 90, 150); */
@@ -231,19 +259,20 @@ label{
     height: 83vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "txt"
-    "pic";
+    grid-template-areas:
+        "txt"
+        "pic";
     grid-gap: 0px;
 }
-.picsDescription{
+
+.picsDescription {
     display: grid;
     grid-area: txt;
     /* background-color: rebeccapurple; */
     width: 100%;
 }
 
-.picsDescription p{
+.picsDescription p {
     margin-left: 3vh;
     /* width: 23%; */
     /* background-color: red; */
@@ -252,7 +281,8 @@ label{
     text-align: justify;
     margin-top: 3vh;
 }
-.pics h1{
+
+.pics h1 {
     /* display: inline-flex; */
     margin-top: 4%;
     color: var(--hcolor);
@@ -262,7 +292,8 @@ label{
     margin-left: 3vh;
 
 }
-.pic{
+
+.pic {
     display: grid;
     grid-area: pic;
     background-color: rgba(0, 0, 0, 0.5);
@@ -281,65 +312,74 @@ label{
     border: 1px solid black;
     box-shadow: var(--boxshad);
 }
-.pic img{
+
+.pic img {
     height: 43vh;
     width: 57.6vh;
 }
-#answ{
+
+#answ {
     width: 100%;
     height: 45px;
 }
-.container{
+
+.container {
     padding-top: 10vh;
     display: grid;
     width: 100%;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "calcs pics";
+    grid-template-areas:
+        "calcs pics";
     grid-gap: 170px;
 }
+
 @media screen and (max-width: 435px) {
-    body{
+    body {
         height: 100vh;
         background-image: var(--backgrad), url(../temp/zemlya-planeta-kosmos-6494.jpg);
-        background-attachment:fixed;
+        background-attachment: fixed;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-color: #fff;
     }
+
     .container {
         display: grid;
         width: 100%;
         height: 88vh;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "calcs"    
-        "pics";
+        grid-template-areas:
+            "calcs"
+            "pics";
         grid-gap: 10px;
     }
-    .forma{
+
+    .forma {
         display: grid;
         grid-area: calcs;
         width: 100%;
         margin-left: 0;
     }
-    .forma h1{
-        font-size:3.3rem;
+
+    .forma h1 {
+        font-size: 3.3rem;
         margin-left: 0;
         padding-left: 30px;
         margin-top: 1vh;
     }
-    .forma p{
+
+    .forma p {
         margin-top: 3vh;
-        font-size:1.3rem;
+        font-size: 1.3rem;
         margin-left: 0;
         padding-left: 30px;
         padding-right: 30px;
     }
+
     .form-container {
         background-color: var(--bgtest);
         border: 1px solid var(--btncolor);
@@ -353,87 +393,95 @@ label{
         font-size: 19px;
         height: 350px;
         margin-top: 5vh;
-        transform: translateX(6%); 
+        transform: translateX(6%);
     }
-    .btn{
+
+    .btn {
         margin-top: 10px;
-    } 
+    }
 
-.pics{
-    display: grid;
-    width: 90%;
-    margin-left: 5%;
-    justify-content: center;
-    height: 83vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "txt"
-    "pic";
-    grid-gap: 0px;
-}
-.picsDescription{
-    display: grid;
-    grid-area: txt;
-    width: 100%;
-}
+    .pics {
+        display: grid;
+        width: 90%;
+        margin-left: 5%;
+        justify-content: center;
+        height: 83vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "txt"
+            "pic";
+        grid-gap: 0px;
+    }
 
-.picsDescription p{
-    color: white;
-    text-align: justify;
-    font-size:1.3rem;
-    margin-left: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.pics h1{
-    /* display: inline-flex; */
-    margin-top: 4%;
-    color: var(--hcolor);
-    -webkit-text-stroke: 2.3px var(--hbr);
-    font-size:3.3rem;
-    width: 100%;
-    margin-left: 3vh;
-    margin-left: 0;
-    padding-left: 30px;
+    .picsDescription {
+        display: grid;
+        grid-area: txt;
+        width: 100%;
+    }
 
-}
-.pic{
-    display: grid;
-    grid-area: pic;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 330px;
-    height: 400px;
-    margin-top: 5vh;
-    margin-left: 0px;
-    margin-right: 39px;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    border: 1px solid black;
-    box-shadow: var(--boxshad);
-    transform: translateX(6%);
-}
-.pic img{
-    width: 330px;
-    height: 400px;
-}
-    .header{
+    .picsDescription p {
+        color: white;
+        text-align: justify;
+        font-size: 1.3rem;
+        margin-left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .pics h1 {
+        /* display: inline-flex; */
+        margin-top: 4%;
+        color: var(--hcolor);
+        -webkit-text-stroke: 2.3px var(--hbr);
+        font-size: 3.3rem;
+        width: 100%;
+        margin-left: 3vh;
+        margin-left: 0;
+        padding-left: 30px;
+
+    }
+
+    .pic {
+        display: grid;
+        grid-area: pic;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 330px;
+        height: 400px;
+        margin-top: 5vh;
+        margin-left: 0px;
+        margin-right: 39px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        border: 1px solid black;
+        box-shadow: var(--boxshad);
+        transform: translateX(6%);
+    }
+
+    .pic img {
+        width: 330px;
+        height: 400px;
+    }
+
+    .header {
         /* padding: 0.3%; */
         background-color: var(--bgnav);
         height: 6.4vh;
     }
-    .icons{
+
+    .icons {
         display: inline-flex;
         margin-right: 5vh;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         width: 100%;
         top: 5vh;
@@ -443,46 +491,54 @@ label{
         overflow: hidden;
         left: 0;
     }
-    .navbar a{
+
+    .navbar a {
         display: block;
         text-align: center;
         margin: 3.3vh;
         /* text-decoration: underline;
         text-underline-offset: 10px; */
     }
-    #contacts{
-    text-align: center;
-    width: 100%;
-    margin-right: 0;
-    font-size: 1.3rem;
-    color: #fff;
-    font-weight: 500;
-    font-family: "Jersey 15", sans-serif;
-    display: block;
-    letter-spacing: 10px;
-        
+
+    #contacts {
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Jersey 15", sans-serif;
+        display: block;
+        letter-spacing: 10px;
+
     }
-    #contacts a{
+
+    #contacts a {
         font-size: 1.7rem;
         color: var(--txtcolor);
         display: inline-block;
         letter-spacing: 50%;
         margin: 0;
     }
-    #space{
+
+    #space {
         height: 100px;
     }
+
     /* Чекбокс для открытия навбара */
-    #cross{
+    #cross {
         display: none;
     }
-    #menuwka:checked~.icons #menu{
+
+    #menuwka:checked~.icons #menu {
         display: none;
     }
-    #menuwka:checked~.navbar{
+
+    #menuwka:checked~.navbar {
         height: 30vh;
     }
-    #menuwka:checked~.icons #cross{
+
+    #menuwka:checked~.icons #cross {
         display: block;
     }
 }

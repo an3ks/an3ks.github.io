@@ -19,16 +19,16 @@ rightArrows.forEach((arrow) => {
         current = (current + 1) % slides.length;
         slides[current].classList.add('active');
         slides[current].style.opacity = 0.4;
-        
+
         var x = 0.4;
-        var intX = setInterval(function(){
-            x+=0.1
+        var intX = setInterval(function () {
+            x += 0.1
             slides[current].style.opacity = x;
-            if (x>=1){
+            if (x >= 1) {
                 clearInterval(intX);
                 x = 0.4
             }
-        },100);
+        }, 100);
     });
 });
 
@@ -38,16 +38,16 @@ leftArrows.forEach((arrow) => {
         current = (current - 1 + slides.length) % slides.length;
         slides[current].classList.add('active');
         slides[current].style.opacity = 0.4;
-        
+
         var x = 0.4;
-        var intX = setInterval(function(){
-            x+=0.1
+        var intX = setInterval(function () {
+            x += 0.1
             slides[current].style.opacity = x;
-            if (x>=1){
+            if (x >= 1) {
                 clearInterval(intX);
                 x = 0.4
             }
-        },100);
+        }, 100);
     });
 });
 

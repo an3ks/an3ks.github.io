@@ -1,17 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Fira Sans", sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-#menuwka{
+
+#menuwka {
     display: none;
 }
 
-body{
+body {
     --txtcolor: #fff;
     --inpcolor: #000;
     --navclr: #fff;
@@ -19,50 +21,52 @@ body{
     --hcolor: rgb(83, 3, 3);
     --mobilebg: rgba(63, 0, 5, 0.527);
 
-    --hcolor2:rgb(255, 124, 183);
+    --hcolor2: rgb(255, 124, 183);
     --mobilebg2: rgba(82, 52, 133, 0.562);
 
-    --hcolor3:rgb(255, 217, 141);
+    --hcolor3: rgb(255, 217, 141);
     --mobilebg3: rgba(83, 44, 2, 0.774);
-    
-    --contacts:rgb(0, 227, 227);
-    --bgnav: rgba(0,0,0,0.7);
-    --bginp: rgba(255,255,255,0.5);
+
+    --contacts: rgb(0, 227, 227);
+    --bgnav: rgba(0, 0, 0, 0.7);
+    --bginp: rgba(255, 255, 255, 0.5);
     --btncolor: rgb(0, 227, 227);
-   
+
     --hbr: transparent;
-    --bgtest: rgba(0,0,0,0.7);
-    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4));
+    --bgtest: rgba(0, 0, 0, 0.7);
+    --backgrad: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
     /* --img: url(../temp/zemlya-planeta-kosmos-6494.jpg); */
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-color: #000;
 }
-.dark{
+
+.dark {
     /* --txtcolor: #000000; */
     --navclr: #000;
-    --contacts:#ea6f42;
+    --contacts: #ea6f42;
     --hcolor: #fff;
     --mobilebg: #a751328f;
 
-    --hcolor2:whitesmoke;
+    --hcolor2: whitesmoke;
     --mobilebg2: rgba(185, 177, 255, 0.5);
 
-    --hcolor3:rgb(255, 255, 255);
+    --hcolor3: rgb(255, 255, 255);
     --mobilebg3: rgba(207, 167, 113, 0.644);
 
     --hbr: #ea6f42;
-    --bgnav: rgba(255,255,255,0.4);
+    --bgnav: rgba(255, 255, 255, 0.4);
     /* --bgtest:rgba(255,255,255,0.0); */
     --bginp: rgba(88, 88, 88, 0.65);
-    
+
     --btncolor: #ff7f50;
     /* --inpcolor: #fff; */
-    --backgrad: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0))
+    --backgrad: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0))
 }
+
 /* Стили для хедер и навбар на компьютерной версии сайта */
-.header{
+.header {
     position: fixed;
     width: 100%;
     padding: 0.3%;
@@ -72,7 +76,8 @@ body{
     align-items: center;
     z-index: 3;
 }
-.navbar a{
+
+.navbar a {
     font-size: 1.7rem;
     color: var(--navclr);
     text-decoration: none;
@@ -80,16 +85,20 @@ body{
     margin-right: 7vh;
     font-family: "Jersey 15", sans-serif;
 }
-.navbar{
+
+.navbar {
     margin-top: 1.4vh;
     margin-right: 10vh;
     justify-content: center;
 }
+
 /* Настройка изображений-кнопок переключения темы*/
-.toggle{
+.toggle {
     display: none;
 }
-#moon, #sun{
+
+#moon,
+#sun {
     margin-left: 3vh;
     width: 40px;
     height: 40px;
@@ -99,22 +108,24 @@ body{
     display: none;
 }
 
-.toggle:checked + .button #sun {
+.toggle:checked+.button #sun {
     display: block;
 }
 
-.toggle:checked + .button #moon {
+.toggle:checked+.button #moon {
     display: none;
 }
+
 /* Настройка для контактов и главного блока текста*/
 
-.icons{
+.icons {
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
+
 /* Стили для контактов */
-#contacts{
+#contacts {
     font-size: 1.3rem;
     text-decoration: none;
     font-weight: 500;
@@ -124,32 +135,38 @@ body{
     float: right;
     letter-spacing: 0;
 }
-#contacts a{
+
+#contacts a {
     letter-spacing: 0;
     margin-right: 3vh;
     margin-top: 0.3vh;
 }
-i{
+
+i {
     color: var(--contacts);
 }
-.slider{
+
+.slider {
     position: relative;
     background-color: black;
 
 }
-.slide{
+
+.slide {
     width: 100%;
     height: 100vh;
     background-size: cover;
     position: relative;
-    background-position:center;
+    background-position: center;
     overflow-x: hidden;
     display: none;
 }
-.active{
+
+.active {
     display: block;
 }
-.description{
+
+.description {
     /* background-color: rgba(0, 0, 0, 0.03); */
     width: 100%;
     position: absolute;
@@ -158,7 +175,9 @@ i{
     padding: 40px 0px;
     color: #fff;
 }
-.left, .right{
+
+.left,
+.right {
     font-weight: bold;
     font-size: 5rem;
     color: #fff;
@@ -172,10 +191,12 @@ i{
     user-select: none;
     transition: 0.7s;
 }
-.fw{
+
+.fw {
     margin-left: 3vh;
 }
-.left p{
+
+.left p {
     width: 80px;
     text-align: center;
     justify-content: center;
@@ -183,7 +204,8 @@ i{
     top: 0;
     transform: translateY(-20%);
 }
-.right p{
+
+.right p {
     width: 80px;
     text-align: center;
     justify-content: center;
@@ -191,132 +213,156 @@ i{
     top: 0;
     transform: translateY(-20%);
 }
-.left:hover, .right:hover{
+
+.left:hover,
+.right:hover {
     font-size: 7rem;
 
 }
-.left{
+
+.left {
     left: 3px;
 }
-.right{
+
+.right {
     right: 3px;
 }
-.slide1{
-    background-image:var(--backgrad), url(../temp/fog1.jpg);
+
+.slide1 {
+    background-image: var(--backgrad), url(../temp/fog1.jpg);
     background-size: cover;
 }
-#smallscreen{
+
+#smallscreen {
     display: none;
 }
 
-.slide1 .description{
+.slide1 .description {
     width: 23%;
     height: 50vh;
     top: 0;
-    margin-left:17vh;
+    margin-left: 17vh;
     margin-top: 30vh;
     transform: translateY(-1%);
     text-align: center;
-    
+
 }
-.slide1 h1{
+
+.slide1 h1 {
     color: #eea609;
     margin-left: 23vh;
     margin-top: 17vh;
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     width: 30%;
-    
+
 }
 
-.slide1 p{
+.slide1 p {
     font-size: 1.3rem;
     margin-top: 2.7vh;
     text-align: justify;
 }
-#tt1{
+
+#tt1 {
     margin-top: 4vh;
 }
-#bt1{
+
+#bt1 {
     margin-top: 5vh;
 }
-.slide2{
+
+.slide2 {
     background-image: var(--backgrad), url(../temp/fog2.jpg);
 
 }
-.slide2 .description{
+
+.slide2 .description {
     /* background-color: rgb(121, 121, 0); */
     width: 23%;
     height: 50vh;
     top: 0;
-    margin-left:13vh;
-    margin-top:23vh;
+    margin-left: 13vh;
+    margin-top: 23vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
     color: rgb(246, 246, 246);
 }
-.slide2 h1{
+
+.slide2 h1 {
     color: rgb(255, 124, 183);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     margin-bottom: 3vh;
 }
-.slide2 p{
+
+.slide2 p {
     font-size: 1.3rem;
 }
-#tt2{
+
+#tt2 {
     margin-top: 7vh;
 }
-#bt2{
+
+#bt2 {
     margin-top: 5vh;
 }
-.slide3{
-    background-image:var(--backgrad), url(../temp/fog3.jpg);
+
+.slide3 {
+    background-image: var(--backgrad), url(../temp/fog3.jpg);
 }
-.slide3 .description{
+
+.slide3 .description {
     /* background-color: rgb(121, 121, 0); */
     width: 23%;
     height: 50vh;
     top: 0;
-    margin-left:17vh;
+    margin-left: 17vh;
     margin-top: 17vh;
     transform: translateY(-1%);
     text-align: center;
     text-align: justify;
 }
-.slide3 h1{
+
+.slide3 h1 {
     color: rgb(231, 151, 75);
     /* -webkit-text-stroke: 2.3px var(--hbr); */
     font-size: 5rem;
     margin-bottom: 3vh;
     text-align: center;
 }
-.slide3 p{
+
+.slide3 p {
     font-size: 1.3rem;
 }
-#tt3{
+
+#tt3 {
     margin-top: 7vh;
 }
-#bt3{
+
+#bt3 {
     margin-top: 7vh;
 }
-#rotated{
+
+#rotated {
     font-size: 2rem;
     text-align: center;
 }
 
 @media screen and (max-width: 435px) {
-    .header{
+    .header {
         /* padding: 0.3%; */
         background-color: var(--bgnav);
         height: 6.4vh;
     }
-    .icons{
+
+    .icons {
         display: inline-flex;
         margin-right: 5vh;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         width: 100%;
         top: 5vh;
@@ -326,42 +372,48 @@ i{
         overflow: hidden;
         left: 0;
     }
-    .closed{
+
+    .closed {
         display: none;
     }
-    .navbar a{
+
+    .navbar a {
         display: block;
         text-align: center;
         margin: 3.3vh;
         /* text-decoration: underline;
         text-underline-offset: 10px; */
     }
-    #contacts{
-    text-align: center;
-    width: 100%;
-    margin-right: 0;
-    font-size: 1.3rem;
-    color: #fff;
-    font-weight: 500;
-    font-family: "Jersey 15", sans-serif;
-    display: block;
-    letter-spacing: 10px;
-        
+
+    #contacts {
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Jersey 15", sans-serif;
+        display: block;
+        letter-spacing: 10px;
+
     }
-    #contacts a{
+
+    #contacts a {
         font-size: 1.7rem;
         color: var(--txtcolor);
         display: inline-block;
         letter-spacing: 50%;
         margin: 0;
     }
-    .slide1 .description{
+
+    .slide1 .description {
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
         margin-top: 27vh;
     }
-    .slide1 h1{
+
+    .slide1 h1 {
         color: var(--hcolor);
         -webkit-text-stroke: 2.3px var(--hbr);
         margin-left: 0;
@@ -373,7 +425,8 @@ i{
         width: 100%;
         /* background: rgb(64, 40, 121); */
     }
-    .slide1 p{
+
+    .slide1 p {
         margin-top: 5vh;
         background-color: var(--mobilebg);
         border-radius: 30px;
@@ -381,19 +434,23 @@ i{
         margin-left: 10px;
         margin-right: 10px;
     }
-    #tt1{
+
+    #tt1 {
         margin-top: 0vh;
     }
-    #bt1{
+
+    #bt1 {
         margin-top: 9vh;
     }
-    .slide2 .description{
+
+    .slide2 .description {
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
         margin-top: 7vh;
     }
-    .slide2 h1{
+
+    .slide2 h1 {
         color: var(--hcolor2);
         -webkit-text-stroke: 2.3px var(--hbr);
         margin-left: 1vh;
@@ -403,8 +460,9 @@ i{
         text-align: center;
         /* background: rgb(64, 40, 121); */
     }
-    .slide2 p{
-        margin-top: 10vh ;
+
+    .slide2 p {
+        margin-top: 10vh;
         color: var(--navclr);
         background-color: var(--mobilebg2);
         border-radius: 30px;
@@ -412,19 +470,23 @@ i{
         margin-left: 10px;
         margin-right: 10px;
     }
-    #tt2{
+
+    #tt2 {
         margin-top: 7vh;
     }
-    #bt2{
+
+    #bt2 {
         margin-top: 17vh;
     }
-    .slide3 .description{
+
+    .slide3 .description {
         /* background-color: palegreen; */
         width: 100%;
         margin: 0;
         margin-top: 7vh;
     }
-    .slide3 h1{
+
+    .slide3 h1 {
         color: var(--hcolor3);
         -webkit-text-stroke: 2.3px var(--hbr);
         left: 0;
@@ -434,8 +496,9 @@ i{
         /* background: rgb(64, 40, 121); */
         text-align: center;
     }
-    .slide3 p{
-        margin-top: 10vh ;
+
+    .slide3 p {
+        margin-top: 10vh;
         background-color: var(--mobilebg3);
         border-radius: 30px;
         padding: 10px;
@@ -443,13 +506,17 @@ i{
         margin-left: 10px;
         margin-right: 10px;
     }
-    #tt3{
+
+    #tt3 {
         margin-top: 5vh;
     }
-    #bt3{
+
+    #bt3 {
         margin-top: 13vh;
     }
-    .left, .right{
+
+    .left,
+    .right {
         font-weight: bold;
         color: var(--contacts);
         display: flex;
@@ -463,27 +530,35 @@ i{
         font-size: 3rem;
         margin-top: 35vh;
     }
-    .left:hover, .right:hover{
+
+    .left:hover,
+    .right:hover {
         background: none;
         font-size: 3em;
     }
-    .left{
+
+    .left {
         left: 60%;
     }
-    .right{
+
+    .right {
         right: 0px;
     }
+
     /* Чекбокс для открытия навбара */
-    #cross{
+    #cross {
         display: none;
     }
-    #menuwka:checked~.icons #menu{
+
+    #menuwka:checked~.icons #menu {
         display: none;
     }
-    #menuwka:checked~.navbar{
+
+    #menuwka:checked~.navbar {
         height: 30vh;
     }
-    #menuwka:checked~.icons #cross{
+
+    #menuwka:checked~.icons #cross {
         display: block;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +13,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+15&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="../temp/favicon.png">
     <title>COSMOS</title>
 </head>
+
 <body>
     <!-- Хедер, в нем находится чекбокс переключения темы, ссылки на дочерние страницы
      и контакты, также чекбокс для мобильной версии сайта -->
     <header class="header">
         <input type="checkbox" id="toggle" class="toggle">
-<label for="toggle" class="button">
-    <img src="../temp/sun.png" id="sun" alt="Light theme">
-    <img src="../temp/half-moon.png" id="moon" alt="Dark theme">
-</label>
+        <label for="toggle" class="button">
+            <img src="../temp/sun.png" id="sun" alt="Light theme">
+            <img src="../temp/half-moon.png" id="moon" alt="Dark theme">
+        </label>
         <input type="checkbox" id="menuwka">
         <label for="menuwka" class="icons">
             <i id="menu" class='bx bxl-squarespace'></i>
@@ -45,7 +48,9 @@
         <div class="forma">
             <div class="description">
                 <h1>Космическое расстояние</h1>
-                <p><span class="fw">Зачастую</span> космические единицы измерения затрудняют понимание, насколько же действительно велико расстояние в космосе. Используя представленную форму вы сможете перевести любое число в километры и ощутить насколько безграничен космос.
+                <p><span class="fw">Зачастую</span> космические единицы измерения затрудняют понимание, насколько же
+                    действительно велико расстояние в космосе. Используя представленную форму вы сможете перевести любое
+                    число в километры и ощутить насколько безграничен космос.
                 </p>
             </div>
             <div class="form-container">
@@ -67,25 +72,27 @@
                         <p id="answ"></p>
                     </div>
                     <div class="btncont">
-                    <button type="button" id="btn" class="btn">Перевести</button>
-                </div>
+                        <button type="button" id="btn" class="btn">Перевести</button>
+                    </div>
                 </form>
             </div>
-            </div>
+        </div>
         <div class="pics">
             <div class="picsDescription">
                 <h1>Космическая галерея</h1>
-                <p> <span class="fw">В</span> космической галерее вы можете сгенерировать случайное изображение из базы данных NASA. Для этого достаточно нажать по области фотографии.
+                <p> <span class="fw">В</span> космической галерее вы можете сгенерировать случайное изображение из базы
+                    данных NASA. Для этого достаточно нажать по области фотографии.
                 </p>
             </div>
             <!-- <button>Lorem</button> -->
             <div class="pic"></div>
             <div id="space"></div>
-           
+
         </div>
     </div>
-      <script src="gallery.js"></script>
-      <script src="distance.js"></script>
-      <script src="../theme.js"></script>
+    <script src="gallery.js"></script>
+    <script src="distance.js"></script>
+    <script src="../theme.js"></script>
 </body>
+
 </html>
